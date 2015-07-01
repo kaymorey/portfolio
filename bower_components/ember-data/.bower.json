@@ -1,0 +1,25 @@
+{
+  "name": "ember-data",
+  "version": "1.13.4",
+  "main": "ember-data.js",
+  "dependencies": {
+    "ember": ">= 1.8.1 < 2.0.0"
+  },
+  "ignore": [
+    "**/*_configuration.js",
+    "ember-data-setup.js",
+    "docs",
+    "**/*.html"
+  ],
+  "homepage": "https://github.com/components/ember-data",
+  "_release": "1.13.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.13.4",
+    "commit": "6993a4266ffd44fe2cb2922ee9f2b0913f1f2a60"
+  },
+  "_source": "git://github.com/components/ember-data.git",
+  "_target": "~1.13.4",
+  "_originalSource": "ember-data",
+  "_direct": true
+}
