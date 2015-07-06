@@ -39,22 +39,16 @@ gulp.task('css', function() {
 });
 
 gulp.task('templates', function() {
-    return gulp.src(['src/templates/**/*.hbs'])
-        .pipe(handlebars({
-            outputType: 'browser',
-            namespace: 'Ember.TEMPLATES'
-        }))
-        .pipe(concat('templates.js'))
-        .pipe(gulp.dest('build/js'));
+    return gulp.src(['src/templates/**/*.html'])
+        .pipe(gulp.dest('build/templates'));
 });
 
 gulp.task('scripts', function() {
     var scriptSrc = [
-        'src/js/vendor/jquery.min.js',
-        'src/js/vendor/handlebars-v3.0.3.js',
-        'src/js/vendor/ember.min.js',
-        'src/js/vendor/ember-data.js',
-        'src/js/vendor/ember.debug.js'
+        'src/js/angular.min.js',
+        'src/js/angular-route.min.js',
+        'src/controllers.js',
+        'src/app.js',
     ];
 
     return gulp.src(scriptSrc)
@@ -69,7 +63,7 @@ gulp.task('watch', function() {
     gulp.watch('src/css/*.scss', ['css']);
 
     //watches handlebars files for changes
-    gulp.watch('src/templates/**/*.hbs', ['templates']);
+    gulp.watch('src/templates/**/*.html', ['templates']);
 
     //watches JavaScript files for changes
     gulp.watch('src/js/**/*.js', ['scripts']);
