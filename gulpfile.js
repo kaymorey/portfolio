@@ -40,9 +40,12 @@ gulp.task('templates', function() {
 });
 
 gulp.task('css', function() {
-    return gulp.src('src/css/*.css')
+    return gulp.src('src/css/*.scss')
         // .pipe(sourcemaps.init())
-        // .pipe(compass({ sass: 'scss' }))
+        .pipe(compass({
+            sass: 'src/css',
+            require: ['susy']
+        }))
         .pipe(concat('app.css'))
         // .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('build/css'));
@@ -63,21 +66,28 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('build/js'));
 });
 
-gulp.task('watch', function() {
-    //watches SCSS files for changes
-    gulp.watch('src/css/*.css', ['css']);
-
-    //watches index file for changes
-    gulp.watch('src/index.html', ['index']);
-
-    //watches templates files for changes
-    gulp.watch('src/templates/**/*.html', ['templates']);
-
-    //watches JavaScript files for changes
-    gulp.watch('src/js/**/*.js', ['scripts']);
+var fontsSrc = [
+    'src/fonts/**/*.eot',
+    'src/fonts/**/*.svg',
+    'src/fonts/**/*.ttf',
+    'src/fonts/**/*.woff',
+    'src/fonts/**/*.woff2'
+];
+gulp.task('fonts', function() {
+    return gulp.src(fontsSrc)
+        .pipe(gulp.dest('build/fonts'));
 });
 
-gulp.task('build', ['index', 'templates', 'css', 'scripts']);
+
+gulp.task('watch', function() {
+    gulp.watch('src/css/*.scss', ['css']);
+    gulp.watch('src/index.html', ['index']);
+    gulp.watch('src/templates/**/*.html', ['templates']);
+    gulp.watch('src/js/**/*.js', ['scripts']);
+    gulp.watch(fontsSrc, ['fonts']);
+});
+
+gulp.task('build', ['index', 'templates', 'css', 'scripts', 'fonts']);
 gulp.task('server', ['build', 'watch', 'connect'], function () {
     watch(['build/**'], batch(function (events, done) {
         gulp.start('livereload', done);
