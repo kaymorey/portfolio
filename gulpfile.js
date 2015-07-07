@@ -17,11 +17,6 @@ gulp.task('connect', function() {
         root: 'build',
         livereload: true
     });
-});
-
-gulp.task('livereload', function() {
-    gulp.src('build/**')
-        .pipe(connect.reload());
 
     if (!browserYetOpen) {
         open('http://localhost:8080');
@@ -29,18 +24,28 @@ gulp.task('livereload', function() {
     }
 });
 
-gulp.task('css', function() {
-    return gulp.src('src/css/*.scss')
-        .pipe(sourcemaps.init())
-        .pipe(compass({ sass: 'scss' }))
-        .pipe(concat('app.min.css'))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('build/css'));
+gulp.task('livereload', function() {
+    gulp.src('build/**')
+        .pipe(connect.reload());
+});
+
+gulp.task('index', function() {
+    return gulp.src(['src/index.html'])
+        .pipe(gulp.dest('build/'));
 });
 
 gulp.task('templates', function() {
     return gulp.src(['src/templates/**/*.html'])
         .pipe(gulp.dest('build/templates'));
+});
+
+gulp.task('css', function() {
+    return gulp.src('src/css/*.css')
+        // .pipe(sourcemaps.init())
+        // .pipe(compass({ sass: 'scss' }))
+        .pipe(concat('app.css'))
+        // .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('build/css'));
 });
 
 gulp.task('scripts', function() {
@@ -60,16 +65,19 @@ gulp.task('scripts', function() {
 
 gulp.task('watch', function() {
     //watches SCSS files for changes
-    gulp.watch('src/css/*.scss', ['css']);
+    gulp.watch('src/css/*.css', ['css']);
 
-    //watches handlebars files for changes
+    //watches index file for changes
+    gulp.watch('src/index.html', ['index']);
+
+    //watches templates files for changes
     gulp.watch('src/templates/**/*.html', ['templates']);
 
     //watches JavaScript files for changes
     gulp.watch('src/js/**/*.js', ['scripts']);
 });
 
-gulp.task('build', ['templates', 'scripts']);
+gulp.task('build', ['index', 'templates', 'css', 'scripts']);
 gulp.task('server', ['build', 'watch', 'connect'], function () {
     watch(['build/**'], batch(function (events, done) {
         gulp.start('livereload', done);
