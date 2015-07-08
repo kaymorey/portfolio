@@ -1,6 +1,7 @@
 @import "compass/reset";
 @import "fonts.scss";
 @import "mixins.scss";
+@import "variables.scss";
 
 a {
     text-decoration: none;
@@ -46,7 +47,7 @@ section.home {
     display: inline-block;
 
     font-family: 'yanone-light', Arial, sans-serif;
-    @include font-size(30);
+    font-size: 30px;
     text-transform: uppercase;
     color: #333333;
 
@@ -76,21 +77,39 @@ section.home {
 
 /* ------ TEXTS ------ */
 
+.home-title {
+    width: 100%;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+
+    color: $grey-color;
+    text-align: center;
+
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+
+}
+
 .home-title__hello {
     font-family: 'wolf', Arial, sans-serif;
+    color: $red-color;
+    font-size: 160px;
 }
-
 .home-title__presentation {
-    font-family: 'jenna', Arial, sans-serif;
+    font-family: 'jennasue', Arial, sans-serif;
+    font-size: 60px;
 }
-
-
 .home-title__name {
     font-family: 'sunn', Arial, sans-serif;
+    font-size: 88px;
 }
-
-
-.home-title__function {
+.home-title__job {
     font-family: 'yanone-light', Arial, sans-serif;
+    font-size: 39px;
+    text-transform: uppercase;
 }
 
