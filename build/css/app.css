@@ -61,6 +61,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'jennasue';
+  src: url("../fonts/jenna/jennasue-webfont.eot");
+  src: url("../fonts/jenna/jennasue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/jenna/jennasue-webfont.woff2") format("woff2"), url("../fonts/jenna/jennasue-webfont.woff") format("woff"), url("../fonts/jenna/jennasue-webfont.ttf") format("truetype"), url("../fonts/jenna/jennasue-webfont.svg#jenna_sueregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'sunn';
+  src: url("../fonts/sunn/sunn-webfont.eot");
+  src: url("../fonts/sunn/sunn-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sunn/sunn-webfont.woff2") format("woff2"), url("../fonts/sunn/sunn-webfont.woff") format("woff"), url("../fonts/sunn/sunn-webfont.ttf") format("truetype"), url("../fonts/sunn/sunn-webfont.svg#sunnregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'wolf';
+  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot");
+  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/wolf/wolf_in_the_city-webfont.woff2") format("woff2"), url("../fonts/wolf/wolf_in_the_city-webfont.woff") format("woff"), url("../fonts/wolf/wolf_in_the_city-webfont.ttf") format("truetype"), url("../fonts/wolf/wolf_in_the_city-webfont.svg#wolf_in_the_cityregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 a {
   text-decoration: none;
 }
@@ -97,6 +118,7 @@ section.home {
   display: inline-block;
   font-family: 'yanone-light', Arial, sans-serif;
   font-size: 30px;
+  font-size: 3rem;
   text-transform: uppercase;
   color: #333333;
 }
@@ -122,6 +144,23 @@ section.home {
   right: 100px;
 }
 
+/* ------ TEXTS ------ */
+.home-title__hello {
+  font-family: 'wolf', Arial, sans-serif;
+}
+
+.home-title__presentation {
+  font-family: 'jenna', Arial, sans-serif;
+}
+
+.home-title__name {
+  font-family: 'sunn', Arial, sans-serif;
+}
+
+.home-title__function {
+  font-family: 'yanone-light', Arial, sans-serif;
+}
+
 @font-face {
   font-family: 'yanone-light';
   src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot");
@@ -129,3 +168,25 @@ section.home {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'jennasue';
+  src: url("../fonts/jenna/jennasue-webfont.eot");
+  src: url("../fonts/jenna/jennasue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/jenna/jennasue-webfont.woff2") format("woff2"), url("../fonts/jenna/jennasue-webfont.woff") format("woff"), url("../fonts/jenna/jennasue-webfont.ttf") format("truetype"), url("../fonts/jenna/jennasue-webfont.svg#jenna_sueregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'sunn';
+  src: url("../fonts/sunn/sunn-webfont.eot");
+  src: url("../fonts/sunn/sunn-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sunn/sunn-webfont.woff2") format("woff2"), url("../fonts/sunn/sunn-webfont.woff") format("woff"), url("../fonts/sunn/sunn-webfont.ttf") format("truetype"), url("../fonts/sunn/sunn-webfont.svg#sunnregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'wolf';
+  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot");
+  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/wolf/wolf_in_the_city-webfont.woff2") format("woff2"), url("../fonts/wolf/wolf_in_the_city-webfont.woff") format("woff"), url("../fonts/wolf/wolf_in_the_city-webfont.ttf") format("truetype"), url("../fonts/wolf/wolf_in_the_city-webfont.svg#wolf_in_the_cityregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+

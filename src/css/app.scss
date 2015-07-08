@@ -1,5 +1,6 @@
 @import "compass/reset";
 @import "fonts.scss";
+@import "mixins.scss";
 
 a {
     text-decoration: none;
@@ -45,7 +46,7 @@ section.home {
     display: inline-block;
 
     font-family: 'yanone-light', Arial, sans-serif;
-    font-size: 30px;
+    @include font-size(30);
     text-transform: uppercase;
     color: #333333;
 
@@ -72,3 +73,24 @@ section.home {
     bottom: 100px;
     right: 100px;
 }
+
+/* ------ TEXTS ------ */
+
+.home-title__hello {
+    font-family: 'wolf', Arial, sans-serif;
+}
+
+.home-title__presentation {
+    font-family: 'jenna', Arial, sans-serif;
+}
+
+
+.home-title__name {
+    font-family: 'sunn', Arial, sans-serif;
+}
+
+
+.home-title__function {
+    font-family: 'yanone-light', Arial, sans-serif;
+}
+
