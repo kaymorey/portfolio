@@ -1,3 +1,32 @@
+@font-face {
+  font-family: 'yanone-light';
+  src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot");
+  src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.woff2") format("woff2"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.woff") format("woff"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.ttf") format("truetype"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'jennasue';
+  src: url("../fonts/jenna/jennasue-webfont.eot");
+  src: url("../fonts/jenna/jennasue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/jenna/jennasue-webfont.woff2") format("woff2"), url("../fonts/jenna/jennasue-webfont.woff") format("woff"), url("../fonts/jenna/jennasue-webfont.ttf") format("truetype"), url("../fonts/jenna/jennasue-webfont.svg#jenna_sueregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'sunn';
+  src: url("../fonts/sunn/sunn-webfont.eot");
+  src: url("../fonts/sunn/sunn-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sunn/sunn-webfont.woff2") format("woff2"), url("../fonts/sunn/sunn-webfont.woff") format("woff"), url("../fonts/sunn/sunn-webfont.ttf") format("truetype"), url("../fonts/sunn/sunn-webfont.svg#sunnregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'wolf';
+  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot");
+  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/wolf/wolf_in_the_city-webfont.woff2") format("woff2"), url("../fonts/wolf/wolf_in_the_city-webfont.woff") format("woff"), url("../fonts/wolf/wolf_in_the_city-webfont.ttf") format("truetype"), url("../fonts/wolf/wolf_in_the_city-webfont.svg#wolf_in_the_cityregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 
 html, body, div, span, applet, object, iframe,
@@ -88,7 +117,7 @@ a {
   text-decoration: none;
 }
 
-.full-section {
+.full-screen {
   min-width: 100%;
   height: 100%;
   min-height: 100%;
@@ -110,10 +139,9 @@ section.home {
   position: absolute;
   top: 50%;
   background-color: #FFF;
-  -webkit-transform: skewY(-25deg) translateY(-50%);
   -moz-transform: skewY(-25deg) translateY(-50%);
-  -o-transform: skewY(-25deg) translateY(-50%);
   -ms-transform: skewY(-25deg) translateY(-50%);
+  -webkit-transform: skewY(-25deg) translateY(-50%);
   transform: skewY(-25deg) translateY(-50%);
 }
 
@@ -156,10 +184,9 @@ section.home {
   top: 50%;
   color: #333333;
   text-align: center;
-  -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -188,15 +215,19 @@ section.home {
 /***********************
 *        WORKS         *
 ************************/
-section.works {
-  background: url(../images/works/jocondelab.jpg) no-repeat center;
-  background-size: cover;
+.works__container {
+  position: relative;
+  z-index: 200;
+  background-color: rgba(255, 255, 255, 0.7);
   text-align: center;
 }
 
-.works__container {
-  background-color: rgba(255, 255, 255, 0.5);
-  text-align: center;
+.works__background {
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .works__items {
@@ -206,10 +237,9 @@ section.works {
   font-family: 'yanone-light', Arial, sans-serif;
   font-size: 60px;
   text-align: center;
-  -webkit-transform: translateY(-50%) translateX(-50%);
   -moz-transform: translateY(-50%) translateX(-50%);
-  -o-transform: translateY(-50%) translateX(-50%);
   -ms-transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
   transform: translateY(-50%) translateX(-50%);
 }
 
@@ -224,31 +254,63 @@ section.works {
   color: #333333;
 }
 
-@font-face {
-  font-family: 'yanone-light';
-  src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot");
-  src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.woff2") format("woff2"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.woff") format("woff"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.ttf") format("truetype"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight") format("svg");
-  font-weight: normal;
-  font-style: normal;
+.works__link {
+  position: relative;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
 }
-@font-face {
-  font-family: 'jennasue';
-  src: url("../fonts/jenna/jennasue-webfont.eot");
-  src: url("../fonts/jenna/jennasue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/jenna/jennasue-webfont.woff2") format("woff2"), url("../fonts/jenna/jennasue-webfont.woff") format("woff"), url("../fonts/jenna/jennasue-webfont.ttf") format("truetype"), url("../fonts/jenna/jennasue-webfont.svg#jenna_sueregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
+
+.works__link:hover {
+  color: #1e1a1b;
 }
-@font-face {
-  font-family: 'sunn';
-  src: url("../fonts/sunn/sunn-webfont.eot");
-  src: url("../fonts/sunn/sunn-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sunn/sunn-webfont.woff2") format("woff2"), url("../fonts/sunn/sunn-webfont.woff") format("woff"), url("../fonts/sunn/sunn-webfont.ttf") format("truetype"), url("../fonts/sunn/sunn-webfont.svg#sunnregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
+
+.works__link::before {
+  content: '';
+  position: absolute;
+  height: 36px;
+  width: 150px;
+  top: 50%;
+  left: 50%;
+  margin-top: -18px;
+  margin-left: -75px;
+  z-index: -1;
+  background: #F9F9F9;
+  -moz-transform: rotate3d(0, 0, 1, -45deg) scale3d(0, 1, 1);
+  -ms-transform: rotate3d(0, 0, 1, -45deg) scale3d(0, 1, 1);
+  -webkit-transform: rotate3d(0, 0, 1, -45deg) scale3d(0, 1, 1);
+  transform: rotate3d(0, 0, 1, -45deg) scale3d(0, 1, 1);
+  -moz-transition: -moz-transform 0.4s;
+  -o-transition: -o-transform 0.4s;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
 }
-@font-face {
-  font-family: 'wolf';
-  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot");
-  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/wolf/wolf_in_the_city-webfont.woff2") format("woff2"), url("../fonts/wolf/wolf_in_the_city-webfont.woff") format("woff"), url("../fonts/wolf/wolf_in_the_city-webfont.ttf") format("truetype"), url("../fonts/wolf/wolf_in_the_city-webfont.svg#wolf_in_the_cityregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
+
+.works__link:hover::before, .works__link--active::before {
+  -moz-transform: rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);
+  -ms-transform: rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);
+  -webkit-transform: rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);
+  transform: rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);
+}
+
+.works__link span {
+  font-family: 'yanone-light', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  right: 15px;
+  color: #e53369;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform: translate3d(-10px, -10px, 0);
+  transform: translate3d(-10px, -10px, 0);
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.works__link:hover span, .works__link--active span {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0);
 }

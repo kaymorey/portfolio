@@ -1,9 +1,13 @@
-<section class="full-section works">
-    <div class="full-section works__container">
+<section class="full-screen works">
+    <div class="full-screen works__container">
         <ul class="works__items">
             <li ng-repeat="work in works">
-                <a href="#" ng-mouseover="changeBackground($index)">{{ work.title }}</a>
+                <a href="#" ng-mouseover="changeBackground($index)" class="works__link" ng-class="{'works__link--active': work.visible}">
+                    {{ work.title }}
+                    <span class="works__description">{{ work.description }}</span>
+                </a>
             </li>
         </ul>
     </div>
+    <div ng-repeat="work in works" ng-show="work.visible" class="full-screen works__background" style="background-image: url(../images/works/{{ work.image }})"></div>
 </section>
