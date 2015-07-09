@@ -83,7 +83,7 @@ gulp.task('watch', function() {
     gulp.watch('src/css/*.scss', ['css']);
     gulp.watch('src/index.html', ['index']);
     gulp.watch('src/templates/**/*.html', ['templates']);
-    gulp.watch('src/js/**/*.js', ['scripts']);
+    gulp.watch('src/**/*.js', ['scripts']);
     gulp.watch(fontsSrc, ['fonts']);
 });
 

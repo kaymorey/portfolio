@@ -1,5 +1,9 @@
-<section class="home">
-    <a href="#" class="home-link home-link__project">My Projects</a>
-    <div class="skew"></div>
-    <a href="#" class="home-link home-link__about">About me</a>
+<section class="full-section works">
+    <div class="full-section works__container">
+        <ul class="works__items">
+            <li ng-repeat="work in works">
+                <a href="#" ng-mouseover="changeBackground($index)">{{ work.title }}</a>
+            </li>
+        </ul>
+    </div>
 </section>

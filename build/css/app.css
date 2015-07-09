@@ -1,34 +1,5 @@
 
 
-@font-face {
-  font-family: 'yanone-light';
-  src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot");
-  src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.woff2") format("woff2"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.woff") format("woff"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.ttf") format("truetype"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'jennasue';
-  src: url("../fonts/jenna/jennasue-webfont.eot");
-  src: url("../fonts/jenna/jennasue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/jenna/jennasue-webfont.woff2") format("woff2"), url("../fonts/jenna/jennasue-webfont.woff") format("woff"), url("../fonts/jenna/jennasue-webfont.ttf") format("truetype"), url("../fonts/jenna/jennasue-webfont.svg#jenna_sueregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'sunn';
-  src: url("../fonts/sunn/sunn-webfont.eot");
-  src: url("../fonts/sunn/sunn-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sunn/sunn-webfont.woff2") format("woff2"), url("../fonts/sunn/sunn-webfont.woff") format("woff"), url("../fonts/sunn/sunn-webfont.ttf") format("truetype"), url("../fonts/sunn/sunn-webfont.svg#sunnregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'wolf';
-  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot");
-  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/wolf/wolf_in_the_city-webfont.woff2") format("woff2"), url("../fonts/wolf/wolf_in_the_city-webfont.woff") format("woff"), url("../fonts/wolf/wolf_in_the_city-webfont.ttf") format("truetype"), url("../fonts/wolf/wolf_in_the_city-webfont.svg#wolf_in_the_cityregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -117,16 +88,19 @@ a {
   text-decoration: none;
 }
 
-/***********************
-*        HOME          *
-************************/
-section.home {
+.full-section {
   min-width: 100%;
   height: 100%;
   min-height: 100%;
   position: fixed;
   top: 0;
   left: 0;
+}
+
+/***********************
+*        HOME          *
+************************/
+section.home {
   background-color: #f0f1f5;
 }
 
@@ -209,4 +183,72 @@ section.home {
   font-family: 'yanone-light', Arial, sans-serif;
   font-size: 39px;
   text-transform: uppercase;
+}
+
+/***********************
+*        WORKS         *
+************************/
+section.works {
+  background: url(../images/works/jocondelab.jpg) no-repeat center;
+  background-size: cover;
+  text-align: center;
+}
+
+.works__container {
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+.works__items {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  font-family: 'yanone-light', Arial, sans-serif;
+  font-size: 60px;
+  text-align: center;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -o-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.works__items li {
+  padding-top: 20px;
+}
+.works__items li:first-child {
+  padding-top: 0;
+}
+
+.works__items a {
+  color: #333333;
+}
+
+@font-face {
+  font-family: 'yanone-light';
+  src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot");
+  src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.woff2") format("woff2"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.woff") format("woff"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.ttf") format("truetype"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'jennasue';
+  src: url("../fonts/jenna/jennasue-webfont.eot");
+  src: url("../fonts/jenna/jennasue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/jenna/jennasue-webfont.woff2") format("woff2"), url("../fonts/jenna/jennasue-webfont.woff") format("woff"), url("../fonts/jenna/jennasue-webfont.ttf") format("truetype"), url("../fonts/jenna/jennasue-webfont.svg#jenna_sueregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'sunn';
+  src: url("../fonts/sunn/sunn-webfont.eot");
+  src: url("../fonts/sunn/sunn-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sunn/sunn-webfont.woff2") format("woff2"), url("../fonts/sunn/sunn-webfont.woff") format("woff"), url("../fonts/sunn/sunn-webfont.ttf") format("truetype"), url("../fonts/sunn/sunn-webfont.svg#sunnregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'wolf';
+  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot");
+  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/wolf/wolf_in_the_city-webfont.woff2") format("woff2"), url("../fonts/wolf/wolf_in_the_city-webfont.woff") format("woff"), url("../fonts/wolf/wolf_in_the_city-webfont.ttf") format("truetype"), url("../fonts/wolf/wolf_in_the_city-webfont.svg#wolf_in_the_cityregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
