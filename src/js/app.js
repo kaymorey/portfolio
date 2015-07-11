@@ -1,6 +1,7 @@
 var app = angular.module('portfolio', [
     'ngRoute',
-    'PortfolioControllers'
+    'PortfolioControllers',
+    'PortfolioDirectives'
 ]);
 
 app.config(['$routeProvider',

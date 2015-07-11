@@ -53,10 +53,12 @@ gulp.task('css', function() {
 
 gulp.task('scripts', function() {
     var scriptSrc = [
-        'src/js/angular.min.js',
-        'src/js/angular-route.min.js',
-        'src/controllers.js',
-        'src/app.js',
+        'src/js/vendor/angular.min.js',
+        'src/js/vendor/angular-route.min.js',
+        'src/js/vendor/snap.svg-min.js',
+        'src/js/directives.js',
+        'src/js/controllers.js',
+        'src/js/app.js',
     ];
 
     return gulp.src(scriptSrc)
