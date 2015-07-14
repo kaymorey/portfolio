@@ -56,6 +56,7 @@ gulp.task('scripts', function() {
         'src/js/vendor/angular.min.js',
         'src/js/vendor/angular-route.min.js',
         'src/js/vendor/snap.svg-min.js',
+        'src/js/Triangle.js',
         'src/js/directives.js',
         'src/js/controllers.js',
         'src/js/app.js',

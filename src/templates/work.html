@@ -1,5 +1,34 @@
-<section class="home">
-    <a href="#" class="home-link home-link__project">My Projects</a>
-    <div class="skew"></div>
-    <a href="#" class="home-link home-link__about">About me</a>
+<section class="work">
+    <div class="work__background" style="background-image: url(../images/works/{{ work.image }})">
+        <h1 class="work__title">{{ work.title }}</h1>
+    </div>
+    <div class="work__content">
+        <p class="work__text work__description">
+            {{ work.description }}
+        </p>
+        <div class="work__video">
+            <iframe src="https://player.vimeo.com/video/130524548" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <h2 class="work__subtitle">Purpose of the project</h2>
+        <p class="work__text work__paragraph">
+            Before going to bed, children are often afraid of leaving their parent’s side. Some tend to extend their bedtime as much as they can, usually by wanting to listen to another story, then another one, and this can go on for hours.
+            We wanted to create a bedtime routine that combines two of the strongest existing solutions: the bedtime story and the nightlight.
+        </p>
+        <h2 class="work__subtitle">Technologies</h2>
+        <ul class="work__text work__list">
+            <li>Objective-C</li>
+            <li>Arduino</li>
+        </ul>
+        <h2 class="work__subtitle">Team</h2>
+        <ul class="work__text work__list">
+            <li>Katia Moreira - Developer</li>
+            <li>Alexis Tessier - Developer</li>
+            <li>Athanassios Tohme - Designer</li>
+            <li>Jonas Deprund - Designer</li>
+        </ul>
+        <h2 class="work__subtitle">Website</h2>
+        <p class="work__link">
+            <a href="http://lantern-app.com" target="_blank">lantern-app.com</a>
+        </p>
+    </div>
 </section>

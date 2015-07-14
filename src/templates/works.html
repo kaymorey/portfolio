@@ -1,10 +1,10 @@
 <section class="full-screen works">
     <div class="full-screen works__container">
         <ul class="works__items">
-            <li ng-repeat="work in works">
-                <a href="#" ng-mouseover="changeBackground($index)" class="works__link" ng-class="{'works__link--active': work.visible}">
+            <li ng-repeat="(identifier, work) in works">
+                <a ng-href="#/works/{{ identifier }}" ng-mouseover="changeBackground(identifier)" class="works__link" ng-class="{'works__link--active': work.visible}">
                     {{ work.title }}
-                    <span class="works__description">{{ work.description }}</span>
+                    <span class="works__description {{ work.color }}">{{ work.description }}</span>
                 </a>
             </li>
         </ul>
