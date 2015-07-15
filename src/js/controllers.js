@@ -59,7 +59,7 @@ var PortfolioControllers = angular.module('PortfolioControllers', [])
             'color': 'yellow',
             'visible': true,
             'subtitle': 'iOS application & connected object',
-            'description': 'Lantern is my final year project in Gobelins. It is a nightlight that creates an atmosphere of sound and light according to the story the parent reads.',
+            'description': 'Lantern is my final year project in Gobelins. It is a nightlight that creates an atmosphere of sound and light according to the story the parent reads on a tablet.',
             'video': '130524548'
         },
         'trust': {

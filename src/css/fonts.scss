@@ -11,6 +11,18 @@
 }
 
 @font-face {
+    font-family: 'yanone';
+    src: url('../fonts/yanone/yanonekaffeesatz-regular-webfont.eot');
+    src: url('../fonts/yanone/yanonekaffeesatz-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/yanone/yanonekaffeesatz-regular-webfont.woff2') format('woff2'),
+         url('../fonts/yanone/yanonekaffeesatz-regular-webfont.woff') format('woff'),
+         url('../fonts/yanone/yanonekaffeesatz-regular-webfont.ttf') format('truetype'),
+         url('../fonts/yanone/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'jennasue';
     src: url('../fonts/jenna/jennasue-webfont.eot');
     src: url('../fonts/jenna/jennasue-webfont.eot?#iefix') format('embedded-opentype'),

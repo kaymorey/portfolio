@@ -62,6 +62,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-style: normal;
 }
 @font-face {
+  font-family: 'yanone';
+  src: url("../fonts/yanone/yanonekaffeesatz-regular-webfont.eot");
+  src: url("../fonts/yanone/yanonekaffeesatz-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.woff2") format("woff2"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.woff") format("woff"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.ttf") format("truetype"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzlight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'jennasue';
   src: url("../fonts/jenna/jennasue-webfont.eot");
   src: url("../fonts/jenna/jennasue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/jenna/jennasue-webfont.woff2") format("woff2"), url("../fonts/jenna/jennasue-webfont.woff") format("woff"), url("../fonts/jenna/jennasue-webfont.ttf") format("truetype"), url("../fonts/jenna/jennasue-webfont.svg#jenna_sueregular") format("svg");
@@ -264,10 +271,18 @@ section.home {
   height: 80vh;
   line-height: 80vh;
   background-attachment: fixed;
+  background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.work__showcase {
+  text-align: center;
+}
+.work__showcase img {
+  max-width: 100%;
 }
 
 .work__title {
@@ -287,8 +302,7 @@ section.home {
 
 .work__content {
   padding: 50px 0;
-  width: 75%;
-  margin: 0 auto;
+  width: 100%;
   font-family: 'Open Sans', Arial, sans-serif;
 }
 
@@ -309,12 +323,14 @@ section.home {
 }
 
 .work__description {
-  max-width: 500px;
+  max-width: 600px;
+  font-size: 20px;
   text-align: center;
+  line-height: 25px;
 }
 
 .work__paragraph {
-  max-width: 700px;
+  max-width: 800px;
 }
 
 .work__video {
