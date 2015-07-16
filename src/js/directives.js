@@ -25,7 +25,7 @@ angular.module('PortfolioDirectives', [])
                 var colorIndex = Math.floor(Math.random() * 3);
                 var color = colors[colorIndex];
 
-                var triangle = new Triangle(x, y, color, size, s);
+                var triangle = new Triangle(x, y, color, size, s, true);
             }
         }
     }
@@ -35,12 +35,12 @@ angular.module('PortfolioDirectives', [])
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
-            console.log('test');
             var s = Snap('#title-svg');
             var size = 15;
             var colors = ['#fead13', '#21a5ad', '#f5484a'];
-            var posX = [30, 40, 50];
-            var posY = [0, -10, 10];
+            var angles = [0, 65, 60];
+            var posX = [28, 46, 56];
+            var posY = [-10, -27, -4];
             var i = 0;
 
             for (i = 0; i < 3; i++) {
@@ -48,8 +48,10 @@ angular.module('PortfolioDirectives', [])
                 var y = posY[i];
 
                 var color = colors[i];
+                var angle = angles[i];
 
-                var triangle = new Triangle(x, y, color, size, s);
+                var triangle = new Triangle(x, y, color, size, s, false);
+                triangle.rotate(angle);
             }
         }
     }

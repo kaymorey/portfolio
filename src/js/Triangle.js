@@ -1,7 +1,7 @@
 var Triangle = (function() {
     'use strict';
 
-    function Triangle(x, y, color, size, s) {
+    function Triangle(x, y, color, size, s, home) {
         this.x = x;
         this.y = y;
         this.s = s;
@@ -12,14 +12,10 @@ var Triangle = (function() {
 
         this.color = color;
 
-        this.init();
+        this.createTriangle(home);
     }
 
-    Triangle.prototype.init = function() {
-        this.createTriangles();
-    }
-
-    Triangle.prototype.createTriangles = function() {
+    Triangle.prototype.createTriangle = function(home) {
         var filledTriangle = this.s.paper.polygon([
             this.x - this.size2, this.y + this.height,
             this.x + this.size2, this.y + this.height,
@@ -31,22 +27,24 @@ var Triangle = (function() {
             stroke: this.color,
             strokeWidth: 2
         });
-        this.filled = filledTriangle;
+        this.triangle = filledTriangle;
 
-        var unfilledTriangle = this.s.paper.polygon([
-            this.x - this.size2, this.y + this.height,
-            this.x + this.size2, this.y + this.height,
-            this.x, this.y, this.x - this.size2,
-            this.y + this.height
-        ]);
-        unfilledTriangle.attr({
-            fill: 'none',
-            stroke: this.color,
-            strokeWidth: 2
-        });
-        this.unfilled = unfilledTriangle;
+        if (home) {
+            var unfilledTriangle = this.s.paper.polygon([
+                this.x - this.size2, this.y + this.height,
+                this.x + this.size2, this.y + this.height,
+                this.x, this.y, this.x - this.size2,
+                this.y + this.height
+            ]);
+            unfilledTriangle.attr({
+                fill: 'none',
+                stroke: this.color,
+                strokeWidth: 2
+            });
+            this.unfilled = unfilledTriangle;
 
-        this.hoverAnimation();
+            this.hoverAnimation();
+        }
     }
 
     Triangle.prototype.hoverAnimation = function() {
@@ -55,7 +53,7 @@ var Triangle = (function() {
         var matrix = new Snap.Matrix();
         matrix.scale(1.2);
 
-        this.filled.hover(function() {
+        this.triangle.hover(function() {
             self.unfilled.animate({
                 transform: 's2.0T0,-2',
                 opacity: 0
@@ -66,6 +64,10 @@ var Triangle = (function() {
                 });
             });
         });
+    }
+
+    Triangle.prototype.rotate = function(angle) {
+        this.triangle.transform('r'+angle);
     }
 
     return Triangle;
