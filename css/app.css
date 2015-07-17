@@ -1,79 +1,427 @@
-/*
-Error: Invalid CSS after "...color: rgba(0, ": expected function argument, was ",0, 0, 0.5);"
-        on line 320 of /Users/opsone/Documents/Gobelins/portfolio/src/css/app.scss
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
 
-315: .work-nav__link--next {
-316:     width: 65%;
-317:     background-color: $yellow-color;
-318:     background-position: center;
-319:     color: #FFF;
-320:     background-color: rgba(0, ,0, 0, 0.5);
-321: 
-322:     -webkit-background-size: cover;
-323:        -moz-background-size: cover;
-324:          -o-background-size: cover;
-325:             background-size: cover;
+html {
+  line-height: 1;
+}
 
-Backtrace:
-/Users/opsone/Documents/Gobelins/portfolio/src/css/app.scss:320
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:1163:in `expected'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/lexer.rb:220:in `expected!'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:572:in `assert_expr'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:486:in `block in arglist'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:460:in `loop'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:460:in `arglist'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:445:in `fn_arglist'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:407:in `funcall'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:387:in `ident'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:246:in `unary_not'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:246:in `unary_div'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:246:in `unary_minus'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:246:in `unary_plus'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:227:in `times_div_or_mod'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:227:in `plus_or_minus'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:227:in `relational'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:227:in `eq_or_neq'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:227:in `and_expr'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:227:in `or_expr'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:361:in `space'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:345:in `interpolation'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:293:in `expr'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:570:in `assert_expr'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/script/parser.rb:62:in `parse'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:1025:in `sass_script'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:878:in `value!'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:753:in `block in try_declaration'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:1139:in `call'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:1139:in `rethrow'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:766:in `try_declaration'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:696:in `declaration_or_ruleset'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:661:in `block_child'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:653:in `block_contents'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:642:in `block'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:635:in `ruleset'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:660:in `block_child'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:653:in `block_contents'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:117:in `stylesheet'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:42:in `parse'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/engine.rb:393:in `_to_tree'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/engine.rb:268:in `render'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.2/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:44:in `call'
-/Users/opsone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
-/Users/opsone/.rbenv/versions/2.1.2/bin/compass:23:in `load'
-/Users/opsone/.rbenv/versions/2.1.2/bin/compass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...color: rgba(0, \": expected function argument, was \",0, 0, 0.5);\"\A         on line 320 of /Users/opsone/Documents/Gobelins/portfolio/src/css/app.scss\A \A 315: .work-nav__link--next {\A 316:     width: 65%;\A 317:     background-color: $yellow-color;\A 318:     background-position: center;\A 319:     color: #FFF;\A 320:     background-color: rgba(0, ,0, 0, 0.5);\A 321: \A 322:     -webkit-background-size: cover;\A 323:        -moz-background-size: cover;\A 324:          -o-background-size: cover;\A 325:             background-size: cover;"; }
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'yanone-light';
+  src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot");
+  src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.woff2") format("woff2"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.woff") format("woff"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.ttf") format("truetype"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'yanone';
+  src: url("../fonts/yanone/yanonekaffeesatz-regular-webfont.eot");
+  src: url("../fonts/yanone/yanonekaffeesatz-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.woff2") format("woff2"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.woff") format("woff"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.ttf") format("truetype"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzlight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'jennasue';
+  src: url("../fonts/jenna/jennasue-webfont.eot");
+  src: url("../fonts/jenna/jennasue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/jenna/jennasue-webfont.woff2") format("woff2"), url("../fonts/jenna/jennasue-webfont.woff") format("woff"), url("../fonts/jenna/jennasue-webfont.ttf") format("truetype"), url("../fonts/jenna/jennasue-webfont.svg#jenna_sueregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'sunn';
+  src: url("../fonts/sunn/sunn-webfont.eot");
+  src: url("../fonts/sunn/sunn-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sunn/sunn-webfont.woff2") format("woff2"), url("../fonts/sunn/sunn-webfont.woff") format("woff"), url("../fonts/sunn/sunn-webfont.ttf") format("truetype"), url("../fonts/sunn/sunn-webfont.svg#sunnregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'wolf';
+  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot");
+  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/wolf/wolf_in_the_city-webfont.woff2") format("woff2"), url("../fonts/wolf/wolf_in_the_city-webfont.woff") format("woff"), url("../fonts/wolf/wolf_in_the_city-webfont.ttf") format("truetype"), url("../fonts/wolf/wolf_in_the_city-webfont.svg#wolf_in_the_cityregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+}
+
+.full-screen {
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.title-svg .title-svg__content {
+  position: relative;
+}
+.title-svg svg {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  overflow: visible;
+}
+
+/***********************
+*        HOME          *
+************************/
+section.home {
+  background-color: #f0f1f5;
+}
+
+.skew {
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0% 65%, 0% 100%, 35% 100%, 100% 35%, 100% 0%, 65% 0%);
+}
+
+/* ------ LINKS ------ */
+.home-link {
+  position: relative;
+  display: inline-block;
+  font-family: 'yanone-light', Arial, sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #333333;
+}
+.home-link::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  border-bottom: solid #FFF 4px;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+}
+
+.home-link__project {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+.home-link__about {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+}
+
+/* ------ TEXTS ------ */
+.home-title {
+  width: 100%;
+  margin-top: -20px;
+  position: absolute;
+  top: 50%;
+  color: #333333;
+  text-align: center;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.home-title__hello {
+  font-family: 'wolf', Arial, sans-serif;
+  color: #f5484a;
+  font-size: 160px;
+}
+
+.home-title__presentation {
+  font-family: 'jennasue', Arial, sans-serif;
+  font-size: 60px;
+}
+
+.home-title__name {
+  font-family: 'sunn', Arial, sans-serif;
+  font-size: 88px;
+}
+
+.home-title__job {
+  font-family: 'yanone-light', Arial, sans-serif;
+  font-size: 39px;
+  text-transform: uppercase;
+}
+
+/***********************
+*        WORKS         *
+************************/
+.works__container {
+  position: relative;
+  z-index: 200;
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.works__background {
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.works__items {
+  width: 35%;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  font-family: 'yanone-light', Arial, sans-serif;
+  font-size: 60px;
+  text-align: center;
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.works__items li {
+  padding-top: 20px;
+}
+.works__items li:first-child {
+  padding-top: 0;
+}
+
+.works__link {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  color: #333333;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.works__link:hover {
+  color: #1e1a1b;
+}
+
+.works__description {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-family: 'yanone-light', Arial, sans-serif;
+  font-size: 20px;
+  opacity: 0;
+  -moz-transform: translate3d(-50%, -10px, 0);
+  -ms-transform: translate3d(-50%, -10px, 0);
+  -webkit-transform: translate3d(-50%, -10px, 0);
+  transform: translate3d(-50%, -10px, 0);
+  -moz-transition: -moz-transform 0.5s, opacity 0.5s;
+  -o-transition: -o-transform 0.5s, opacity 0.5s;
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.works__link:hover .works__description, .works__link--active .works__description {
+  opacity: 1;
+  -moz-transform: translate3d(-50%, 15px, 0);
+  -ms-transform: translate3d(-50%, 15px, 0);
+  -webkit-transform: translate3d(-50%, 15px, 0);
+  transform: translate3d(-50%, 15px, 0);
+}
+
+/***********************
+*         WORK         *
+************************/
+.work__background {
+  height: 80vh;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.work__showcase {
+  text-align: center;
+}
+.work__showcase img {
+  max-width: 100%;
+}
+
+.work__title {
+  font-family: 'yanone-light', Arial, sans-serif;
+  font-size: 60px;
+  text-align: center;
+  color: #333333;
+}
+
+.work__main-subtitle {
+  text-align: center;
+  font-family: 'yanone-light', Arial, sans-serif;
+  font-size: 20px;
+}
+
+.work__subtitle {
+  padding: 40px 0 15px 0;
+  font-family: 'yanone-light', Arial, sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: #333333;
+}
+
+.work__content {
+  padding: 50px 0;
+  width: 100%;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.work__text {
+  line-height: 22px;
+  margin: 0 auto;
+}
+
+.work__list {
+  text-align: center;
+}
+
+.work__link {
+  text-align: center;
+}
+.work__link a {
+  color: #333333;
+}
+
+.work__description {
+  max-width: 600px;
+  padding: 40px 0;
+  font-size: 20px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.work__paragraph {
+  text-align: center;
+  max-width: 800px;
+}
+
+.work__video {
+  text-align: center;
+}
+.work__video iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+}
+
+.work-nav {
+  font-size: 0;
+}
+
+.work-nav__link {
+  display: inline-block;
+  height: 300px;
+  line-height: 300px;
+  text-align: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.work-nav__background {
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.6;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.work-nav__text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #fead13;
+}
+
+.work-nav__link--back {
+  width: 35%;
+  background-color: #fff9ee;
+  color: #fead13;
+}
+
+.work-nav__link--next {
+  width: 65%;
+  position: relative;
+  overflow: hidden;
+  vertical-align: bottom;
+  background-color: #333333;
+  background-position: center;
+  color: #FFF;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/************************/
+.red {
+  color: #f5484a;
+}
+
+.blue {
+  color: #21a5ad;
+}
+
+.yellow {
+  color: #fead13;
+}

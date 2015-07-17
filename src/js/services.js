@@ -1,58 +1,9 @@
-angular.module('PortfolioControllers', [])
+angular.module('PortfolioServices', [])
 
-.controller('HomeCtrl', function HomeCtrl($scope) {
+.factory('WorksService', function() {
+    var worksService = {};
 
-})
-
-.controller('WorksCtrl', function WorksCtrl($scope) {
-    $scope.works = {
-        'lantern': {
-            'title': 'Lantern',
-            'image': 'lantern.jpg',
-            'color': 'yellow',
-            'visible': true,
-            'description': 'iOS application & connected object'
-        },
-        'trust': {
-            'title': 'Trust',
-            'image': 'trust.jpg',
-            'color': 'blue',
-            'visible': false,
-            'description': 'iOS application'
-        },
-        'animooh': {
-            'title': 'Animooh',
-            'image': 'animooh.jpg',
-            'color': 'red',
-            'visible': false,
-            'description': 'iOS application'
-        },
-        'simonpong': {
-            'title': 'SimonPong',
-            'image': 'simonpong.jpg',
-            'color': 'blue',
-            'visible': false,
-            'description': 'arduino experiment'
-        },
-        'jocondelab': {
-            'title': 'JocondeLab',
-            'image': 'jocondelab.jpg',
-            'color': 'red',
-            'visible': false,
-            'description': 'angularJS web experiment'
-        }
-    };
-
-    $scope.changeBackground = function(identifier) {
-        angular.forEach($scope.works, function(work) {
-            work.visible = false;
-        });
-        $scope.works[identifier].visible = true;
-    }
-})
-
-.controller('WorkCtrl', function WorkCtrl($scope, $routeParams) {
-    $scope.works = {
+    var works = {
         'lantern': {
             'title': 'Lantern',
             'image': 'lantern.jpg',
@@ -99,7 +50,32 @@ angular.module('PortfolioControllers', [])
             'video': '130524548'
         }
     };
-    var identifier = $routeParams.identifier;
 
-    $scope.work = $scope.works[identifier];
+    worksService.getWorks = function() {
+        return works;
+    }
+
+    workService.getWork = function(identifier) {
+        return works[identifier];
+    }
+
+    workService.getNextWork = function(identifier) {
+        var index = 0;
+        angular.forEach(works, function(work, key) {
+            if (key == identifier) {
+                var nextIndex = index + 1;
+                if (nextIndex == works.length - 1) {
+                    nextIndex = 0;
+                }
+
+                return works[nextIndex];
+            }
+
+            index++;
+        });
+
+        return null;
+    }
+
+    return worksService;
 });

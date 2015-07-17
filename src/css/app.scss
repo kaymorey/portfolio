@@ -307,6 +307,25 @@ section.home {
     text-transform: uppercase;
 }
 
+.work-nav__background {
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0.6;
+
+    @include transform(translateX(-50%) translateY(-50%));
+}
+
+.work-nav__text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: $yellow-color;
+}
+
 .work-nav__link--back {
     width: 35%;
     background-color: $beige-color;
@@ -314,7 +333,10 @@ section.home {
 }
 .work-nav__link--next {
     width: 65%;
-    background-color: $yellow-color;
+    position: relative;
+    overflow: hidden;
+    vertical-align: bottom;
+    background-color: $grey-color;
     background-position: center;
     color: #FFF;
 
