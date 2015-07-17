@@ -302,19 +302,26 @@ section.home {
     height: 300px;
     line-height: 300px;
     text-align: center;
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 30px;
-    font-weight: 600;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 25px;
     text-transform: uppercase;
 }
 
 .work-nav__link--back {
     width: 35%;
-    background-color: $grey-color;
-    color: #FFF;
+    background-color: $beige-color;
+    color: $yellow-color;
 }
 .work-nav__link--next {
     width: 65%;
+    background-color: $yellow-color;
+    background-position: center;
+    color: #FFF;
+
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
 }
 
 /************************/
