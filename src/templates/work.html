@@ -8,11 +8,35 @@
             </span>
         </h1>
         <h2 class="work__main-subtitle {{ work.color }}">{{ work.subtitle }}</h2>
-        <p class="work__text work__description">
-            {{ work.description }}
-        </p>
-        <div class="work__video">
+        <div class="work__text work__description">
+            <div class="work-description__content">
+                <div class="work__description--left">
+                    <p>{{ work.introduction }}</p>
+                </div>
+                <div class="work__description--right">
+                    <div class="work-description__column">
+                        <h3 class="work-description__subtitle">Date</h3>
+                        <p>2015</p>
+                    </div>
+                    <div class="work-description__column">
+                        <h3 class="work-description__subtitle">Context</h3>
+                        <p>8 months project at Gobelins</p>
+                    </div>
+                    <div class="work-description__column">
+                        <h3 class="work-description__subtitle">Role</h3>
+                        <p>iOS Developer</p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+<!--         <div class="work__video">
             <iframe src="{{ work.video | trustAsResourceUrl }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div> -->
+        <div class="work__video">
+            <video autoplay loop>
+                <source src="../videos/lantern/covers.mp4" type="video/mp4">
+            </video>
         </div>
         <h3 class="work__subtitle">Purpose of the project</h3>
         <p class="work__text work__paragraph">
@@ -25,12 +49,6 @@
         <ul class="work__text work__list">
             <li ng-repeat="techno in work.technologies">
                 {{ techno }}
-            </li>
-        </ul>
-        <h3 class="work__subtitle">Team</h3>
-        <ul class="work__text work__list">
-            <li ng-repeat="person in work.team">
-                {{ person }}
             </li>
         </ul>
         <h3 class="work__subtitle">Website</h3>

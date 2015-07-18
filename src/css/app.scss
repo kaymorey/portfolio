@@ -1,12 +1,22 @@
 @import "compass/reset";
 @import "compass/css3/transform";
 @import "compass/css3/transition";
+@import "susy";
 @import "fonts.scss";
 @import "mixins.scss";
 @import "variables.scss";
 
+$susy: (
+    columns: 12,
+    gutters: 1/4,
+);
+
 a {
     text-decoration: none;
+}
+
+.clear {
+    clear: both;
 }
 
 .full-screen {
@@ -224,12 +234,49 @@ section.home {
     }
 }
 
+.work__text {
+    line-height: 28px;
+    margin: 0 auto;
+}
+
 .work__title {
     // padding: 0 0 5px 0;
     font-family: 'yanone-light', Arial, sans-serif;
     font-size: 60px;
     text-align: center;
     color: $grey-color;
+}
+
+.work__description {
+    margin: 40px 0;
+    padding: 40px 0;
+    line-height: 25px;
+    color: #FFF;
+    background-color: $red-color;
+}
+
+.work-description__content {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0;
+}
+.work__description--left {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60%;
+    margin-right: 10%;
+    font-size: 16px;
+}
+.work__description--right {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+    font-size: 16px;
+}
+
+.work-description__subtitle {
+    color: $grey-color;
+    font-weight: bold;
 }
 
 .work__main-subtitle {
@@ -243,7 +290,7 @@ section.home {
     font-family: 'yanone-light', Arial, sans-serif;
     font-size: 40px;
     text-align: center;
-    color: $grey-color;
+    color: $red-color;
 }
 
 .work__content {
@@ -251,11 +298,6 @@ section.home {
     width: 100%;
 
     font-family: 'Open Sans', Arial, sans-serif;
-}
-
-.work__text {
-    line-height: 22px;
-    margin: 0 auto;
 }
 
 .work__list {
@@ -270,26 +312,16 @@ section.home {
     }
 }
 
-.work__description {
-    max-width: 600px;
-    padding: 40px 0;
-    font-size: 20px;
-    text-align: center;
-    line-height: 25px;
-}
-
 .work__paragraph {
     text-align: center;
     max-width: 800px;
 }
 
 .work__video {
-    text-align: center;
+    width: 40%;
 
-    iframe {
-        width: 100%;
-        max-width: 900px;
-        height: 500px;
+    video {
+        max-width: 100%;
     }
 }
 

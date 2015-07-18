@@ -10,7 +10,7 @@ angular.module('PortfolioServices', [])
             'color': 'yellow',
             'visible': true,
             'subtitle': 'iOS application & connected object',
-            'description': 'Lantern is my final year project in Gobelins. It is a nightlight that creates an atmosphere of sound and light according to the story the parent reads on a tablet.',
+            'introduction': 'Lantern is my final year project in Gobelins. It is a nightlight that creates an atmosphere of sound and light according to the story the parent reads on a tablet.',
             'video': 'https://player.vimeo.com/video/130524548',
             'purpose': 'Before going to bed, children are often afraid of leaving their parent’s side. Some tend to extend their bedtime as much as they can, usually by wanting to listen to another story, then another one, and this can go on for hours. We wanted to create a bedtime routine that combines two of the strongest existing solutions: the bedtime story and the nightlight.',
             'technologies': ['Objective-C', 'Arduino'],
@@ -27,7 +27,10 @@ angular.module('PortfolioServices', [])
             'color': 'blue',
             'visible': false,
             'subtitle': 'iOS application',
-            'description': 'iOS application & connected object',
+            'introduction': 'Trust is a mobile application that gives you access to a timeline of news.',
+            'purpose': 'The project has been suggested by the Thomson Reuters Foundation to the students of Gobelins. The aim was to propose an application bound to the digital natives to encourage them to read more news. We created a timeline that allows the user to better understand the news by having access to all of its history.',
+            'technologies': ['Objective-C'],
+            'team': ['Katia Moreira - Developer', 'Samuel Honingstein - Developer', 'Marjorie Rouffet - Designer', 'Thibault Terray - Designer'],
             'video': '130524548',
             'next': 'animooh'
         },
@@ -37,7 +40,7 @@ angular.module('PortfolioServices', [])
             'color': 'red',
             'visible': false,
             'subtitle': 'iOS application',
-            'description': 'iOS application & connected object',
+            'introduction': 'iOS application & connected object',
             'video': '130524548',
             'next': 'simonpong'
         },
@@ -47,7 +50,7 @@ angular.module('PortfolioServices', [])
             'color': 'blue',
             'visible': false,
             'subtitle': 'arduino experiment',
-            'description': 'iOS application & connected object',
+            'introduction': 'iOS application & connected object',
             'video': '130524548',
             'next': 'jocondelab'
         },
@@ -57,7 +60,7 @@ angular.module('PortfolioServices', [])
             'color': 'red',
             'visible': false,
             'subtitle': 'angularJS web experiment',
-            'description': 'iOS application & connected object',
+            'introduction': 'iOS application & connected object',
             'video': '130524548',
             'next': 'lantern'
         }
