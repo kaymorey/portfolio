@@ -426,7 +426,6 @@ section.home {
   color: #fead13;
 }
 
-
 @font-face {
   font-family: 'yanone-light';
   src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot");
@@ -462,4 +461,5 @@ section.home {
   font-weight: normal;
   font-style: normal;
 }
+
 

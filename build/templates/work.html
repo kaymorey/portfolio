@@ -12,36 +12,35 @@
             {{ work.description }}
         </p>
         <div class="work__video">
-            <iframe src="https://player.vimeo.com/video/133366157" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src="{{ work.video | trustAsResourceUrl }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <h3 class="work__subtitle">Purpose of the project</h3>
         <p class="work__text work__paragraph">
-            Before going to bed, children are often afraid of leaving their parent’s side. Some tend to extend their bedtime as much as they can, usually by wanting to listen to another story, then another one, and this can go on for hours.
-            We wanted to create a bedtime routine that combines two of the strongest existing solutions: the bedtime story and the nightlight.
+            {{ work.purpose }}
         </p>
         <div class="work__showcase">
             <img src="../images/works/lantern-showcase1.jpg" alt="">
         </div>
         <h3 class="work__subtitle">Technologies</h3>
         <ul class="work__text work__list">
-            <li>Objective-C</li>
-            <li>Arduino</li>
+            <li ng-repeat="techno in work.technologies">
+                {{ techno }}
+            </li>
         </ul>
         <h3 class="work__subtitle">Team</h3>
         <ul class="work__text work__list">
-            <li>Katia Moreira - Developer</li>
-            <li>Alexis Tessier - Developer</li>
-            <li>Athanassios Tohme - Designer</li>
-            <li>Jonas Deprund - Designer</li>
+            <li ng-repeat="person in work.team">
+                {{ person }}
+            </li>
         </ul>
         <h3 class="work__subtitle">Website</h3>
         <p class="work__link">
-            <a href="http://lantern-app.com" target="_blank">lantern-app.com</a>
+            <a href="{{ work.website.url }}" target="_blank">{{ work.website.title }}</a>
         </p>
     </div>
     <nav class="work-nav">
         <a class="work-nav__link work-nav__link--back" href="#/works">Back</a>
-        <a class="work-nav__link work-nav__link--next" href="#">
+        <a class="work-nav__link work-nav__link--next" href="#/works/{{ work.next }}">
             <img class="work-nav__background" src="../images/works/jocondelab.jpg" alt="">
             <span class="work-nav__text">Next project</span>
         </a>
