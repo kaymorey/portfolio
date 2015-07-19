@@ -280,6 +280,34 @@ section.home {
 /***********************
 *         WORK         *
 ************************/
+/* -------- TEXTS ------- */
+.work__title {
+  font-family: 'yanone-light', Arial, sans-serif;
+  font-size: 60px;
+  text-align: center;
+  color: #333333;
+}
+
+.work__main-subtitle {
+  text-align: center;
+  font-family: 'yanone-light', Arial, sans-serif;
+  font-size: 20px;
+}
+
+.work__subtitle {
+  padding: 40px 0 15px 0;
+  font-family: 'yanone-light', Arial, sans-serif;
+  font-size: 40px;
+  color: #f5484a;
+}
+
+.work__text {
+  line-height: 28px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+/* -------- BLOCKS ------- */
 .work__background {
   height: 80vh;
   background-attachment: fixed;
@@ -290,27 +318,22 @@ section.home {
   background-size: cover;
 }
 
-.work__showcase {
-  text-align: center;
-}
-.work__showcase img {
-  max-width: 100%;
-}
-
-.work__text {
-  line-height: 28px;
-  margin: 0 auto;
+.work__content {
+  padding: 50px 0;
+  width: 100%;
+  font-family: 'Open Sans', Arial, sans-serif;
 }
 
-.work__title {
-  font-family: 'yanone-light', Arial, sans-serif;
-  font-size: 60px;
-  text-align: center;
-  color: #333333;
+.work__section {
+  width: 80%;
+  max-width: 1280px;
+  margin: 0 auto 40px auto;
+  font-size: 0;
 }
 
+/* -------- DESCRIPTION ------- */
 .work__description {
-  margin: 40px 0;
+  margin: 40px 0 70px 0;
   padding: 40px 0;
   line-height: 25px;
   color: #FFF;
@@ -326,7 +349,7 @@ section.home {
 .work__description--left {
   display: inline-block;
   vertical-align: middle;
-  width: 60%;
+  width: 50%;
   margin-right: 10%;
   font-size: 16px;
 }
@@ -334,58 +357,68 @@ section.home {
 .work__description--right {
   display: inline-block;
   vertical-align: middle;
-  width: 30%;
+  width: 40%;
   font-size: 16px;
 }
 
 .work-description__subtitle {
+  padding-top: 5px;
   color: #333333;
   font-weight: bold;
 }
 
-.work__main-subtitle {
-  text-align: center;
-  font-family: 'yanone-light', Arial, sans-serif;
-  font-size: 20px;
+/* -------- CONTENT ------- */
+.work__content-text {
+  width: 40%;
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
 }
 
-.work__subtitle {
-  padding: 40px 0 15px 0;
-  font-family: 'yanone-light', Arial, sans-serif;
-  font-size: 40px;
-  text-align: center;
-  color: #f5484a;
+.work__content-text--left {
+  margin-right: 10%;
 }
 
-.work__content {
-  padding: 50px 0;
-  width: 100%;
-  font-family: 'Open Sans', Arial, sans-serif;
+.work__content-text--right {
+  margin-left: 10%;
 }
 
-.work__list {
+/* -------- MEDIAS ------- */
+.work__img {
+  width: 50%;
+  display: inline-block;
   text-align: center;
-}
-
-.work__link {
-  text-align: center;
-}
-.work__link a {
-  color: #333333;
-}
-
-.work__paragraph {
-  text-align: center;
-  max-width: 800px;
+  vertical-align: middle;
 }
 
 .work__video {
-  width: 40%;
-}
-.work__video video {
-  max-width: 100%;
+  text-align: center;
+  background-size: contain;
 }
 
+.work__video--ipad-portrait {
+  width: 397px;
+  height: 571px;
+  background: url(../images/ipad-air.png) no-repeat top;
+}
+.work__video--ipad-portrait video {
+  max-width: calc(100% - 52px);
+  border: solid #888 1px;
+  margin-top: 52px;
+}
+
+.work__link {
+  margin: 70px 0 20px 0;
+  text-align: center;
+}
+.work__link a {
+  padding: 15px;
+  display: inline-block;
+  color: #FFF;
+  background-color: #f5484a;
+}
+
+/* -------- NAV ------- */
 .work-nav {
   font-size: 0;
 }

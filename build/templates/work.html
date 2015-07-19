@@ -23,6 +23,10 @@
                         <p>8 months project at Gobelins</p>
                     </div>
                     <div class="work-description__column">
+                        <h3 class="work-description__subtitle">Technologies</h3>
+                        <p>Objective-C, Arduino</p>
+                    </div>
+                    <div class="work-description__column">
                         <h3 class="work-description__subtitle">Role</h3>
                         <p>iOS Developer</p>
                     </div>
@@ -30,28 +34,61 @@
                 <div class="clear"></div>
             </div>
         </div>
-<!--         <div class="work__video">
-            <iframe src="{{ work.video | trustAsResourceUrl }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div> -->
-        <div class="work__video">
-            <video autoplay loop>
-                <source src="../videos/lantern/covers.mp4" type="video/mp4">
-            </video>
-        </div>
-        <h3 class="work__subtitle">Purpose of the project</h3>
-        <p class="work__text work__paragraph">
-            {{ work.purpose }}
-        </p>
-        <div class="work__showcase">
-            <img src="../images/works/lantern-showcase1.jpg" alt="">
-        </div>
-        <h3 class="work__subtitle">Technologies</h3>
-        <ul class="work__text work__list">
-            <li ng-repeat="techno in work.technologies">
-                {{ techno }}
-            </li>
-        </ul>
-        <h3 class="work__subtitle">Website</h3>
+
+        <section class="work__section work__section--main">
+            <div class="work__content-text work__content-text--left">
+                <h3 class="work__subtitle">Purpose of the project</h3>
+                <p class="work__text">
+                    {{ work.purpose }}
+                </p>
+            </div>
+            <div class="work__img">
+                <img src="../images/works/lantern1.png" alt="">
+            </div>
+        </section>
+
+        <section class="work__section">
+            <div class="work__img work__video work__video--ipad-portrait">
+                <video autoplay loop>
+                    <source src="../videos/lantern/covers.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="work__content-text work__content-text--right">
+                <h3 class="work__subtitle">Choose a story</h3>
+                <p class="work__text">
+                    Swipe from right to left to navigate through covers stories. Each cover is represented by illustrations and pictograms which animate while swiping.
+                </p>
+            </div>
+        </section>
+
+        <section class="work__section">
+            <div class="work__content-text work__content-text--left">
+                <h3 class="work__subtitle">Navigate through pages</h3>
+                <p class="work__text">
+                    Just swipe from bottom to top to navigate through pages and see the pictos animate. Each time you change pages, the color of the nightlight changes as well. You can also tap on a small icon to play a one-time animation on the nightlight.
+                </p>
+            </div>
+            <div class="work__img work__video work__video--ipad-portrait">
+                <video autoplay loop>
+                    <source src="../videos/lantern/reading.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <section class="work__section">
+            <div class="work__img work__video work__video--ipad-portrait">
+                <video autoplay loop>
+                    <source src="../videos/lantern/sleep-mode.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="work__content-text work__content-text--right">
+                <h3 class="work__subtitle">Configure sleep mode</h3>
+                <p class="work__text">
+                    At the end of the story, choose a melody and a duration. The nightlight will play the sound and make a sweet light during this time. It will then acompagny the child during the night thanks to a soft light.
+                </p>
+            </div>
+        </section>
+
         <p class="work__link">
             <a href="{{ work.website.url }}" target="_blank">{{ work.website.title }}</a>
         </p>
@@ -62,6 +99,5 @@
             <img class="work-nav__background" src="../images/works/jocondelab.jpg" alt="">
             <span class="work-nav__text">Next project</span>
         </a>
-        <!--  Use img instead of background and add opacity -->
     </nav>
 </section>
