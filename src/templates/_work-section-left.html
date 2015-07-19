@@ -1,0 +1,14 @@
+<div class="work__content-text work__content-text--left">
+    <h3 class="work__subtitle">{{ section.title }}</h3>
+    <p class="work__text">
+        {{ section.text }}
+    </p>
+</div>
+<div ng-if="section.media.type == 'img'" class="work__img">
+    <img ng-src="{{ section.media.src }}" alt="">
+</div>
+<div ng-if="section.media.type == 'video'" class="work__img work__video work__video--{{ section.media.mockup }}">
+    <video autoplay loop>
+        <source ng-src="{{ section.media.src }}" type="video/mp4">
+    </video>
+</div>
