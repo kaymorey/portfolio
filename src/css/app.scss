@@ -328,24 +328,42 @@ section.home {
 
 .work__img {
     width: 50%;
+    max-width: 450px;
     display: inline-block;
     text-align: center;
     vertical-align: middle;
+
+    img {
+        max-width: 100%;
+    }
 }
 
 .work__video {
     text-align: center;
     background-size: contain;
+    background-repeat: no-repeat;
 }
 .work__video--ipad-portrait {
     width: 397px;
     height: 571px;
-    background: url(../images/ipad-air.png) no-repeat top;
+    background-image: url(../images/ipad-air-portrait.png) no-repeat top;
 
     video {
         max-width: calc(100% - 52px);
         border: solid #888 1px;
         margin-top: 52px;
+    }
+}
+.work__video--ipad-landscape {
+    width: 450px;
+    height: 313px;
+    background-image: url(../images/ipad-air-landscape.png);
+    background-position: center;
+
+    video {
+        max-width: calc(100% - 86px);
+        margin-top: 15px;
+        border: solid #888 1px;
     }
 }
 

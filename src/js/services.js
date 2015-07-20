@@ -111,7 +111,7 @@ angular.module('PortfolioServices', [])
                     'left': true,
                     'media': {
                         'type': 'img',
-                        'src': '../images/works/lantern1.png'
+                        'src': '../images/works/animooh1.png'
                     },
                     'title': 'Purpose of the project',
                     'text': 'The subject of the project was "augmented knowledge". We decided to create an application that uses popular science and interactions on a tablet to make the learning funnier.'
@@ -120,7 +120,7 @@ angular.module('PortfolioServices', [])
                     'left': false,
                     'media': {
                         'type': 'video',
-                        'mockup': 'ipad-portrait',
+                        'mockup': 'ipad-landscape',
                         'src': '../videos/animooh/interaction.mp4'
                     },
                     'title': 'Play with animals',
@@ -130,7 +130,7 @@ angular.module('PortfolioServices', [])
                     'left': true,
                     'media': {
                         'type': 'video',
-                        'mockup': 'ipad-portrait',
+                        'mockup': 'ipad-landscape',
                         'src': '../videos/animooh/setules.mp4'
                     },
                     'title': 'Understand how it works',
@@ -140,9 +140,9 @@ angular.module('PortfolioServices', [])
                     'left': false,
                     'media': {
                         'type': 'img',
-                        'src': '../images/works/lantern1.png'
+                        'src': '../images/works/animooh2.jpg'
                     },
-                    'title': 'Discover or re-discover animals',
+                    'title': '(Re)discover animals',
                     'text': 'We chose a dozen of animals which are incredible : let\'s discover the pistol shrimp, the monkfish or the mimic octopus. The parent may learn as many things as his/her children...'
                 }
             ],

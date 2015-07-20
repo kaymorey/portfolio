@@ -1,5 +1,3 @@
-
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -388,25 +386,42 @@ section.home {
 /* -------- MEDIAS ------- */
 .work__img {
   width: 50%;
+  max-width: 450px;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
+}
+.work__img img {
+  max-width: 100%;
 }
 
 .work__video {
   text-align: center;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .work__video--ipad-portrait {
   width: 397px;
   height: 571px;
-  background: url(../images/ipad-air.png) no-repeat top;
+  background-image: url(../images/ipad-air-portrait.png) no-repeat top;
 }
 .work__video--ipad-portrait video {
   max-width: calc(100% - 52px);
   border: solid #888 1px;
   margin-top: 52px;
+}
+
+.work__video--ipad-landscape {
+  width: 450px;
+  height: 313px;
+  background-image: url(../images/ipad-air-landscape.png);
+  background-position: center;
+}
+.work__video--ipad-landscape video {
+  max-width: calc(100% - 86px);
+  margin-top: 15px;
+  border: solid #888 1px;
 }
 
 .work__link {
@@ -524,3 +539,5 @@ section.home {
   font-weight: normal;
   font-style: normal;
 }
+
+
