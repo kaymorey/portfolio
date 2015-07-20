@@ -155,7 +155,50 @@ angular.module('PortfolioServices', [])
             'visible': false,
             'subtitle': 'arduino experiment',
             'introduction': 'iOS application & connected object',
-            'video': '130524548',
+            'date': '2015',
+            'context': '2 weeks workshop at Gobelins',
+            'technologies': 'Arduino, Processing',
+            'role': 'Developer (and carpenter...)',
+            'sections': [
+                {
+                    'left': true,
+                    'media': {
+                        'type': 'img',
+                        'src': '../images/works/animooh1.png'
+                    },
+                    'title': 'Purpose of the project',
+                    'text': 'The subject of the project was "augmented knowledge". We decided to create an application that uses popular science and interactions on a tablet to make the learning funnier.'
+                },
+                {
+                    'left': false,
+                    'media': {
+                        'type': 'video',
+                        'mockup': 'ipad-landscape',
+                        'src': '../videos/animooh/interaction.mp4'
+                    },
+                    'title': 'Play with animals',
+                    'text': 'Each animal has an extraordinary capability. The child can play and interact with the animal to realize what it is.'
+                },
+                {
+                    'left': true,
+                    'media': {
+                        'type': 'video',
+                        'mockup': 'ipad-landscape',
+                        'src': '../videos/animooh/setules.mp4'
+                    },
+                    'title': 'Understand how it works',
+                    'text': 'Each capability is explained thanks to diagrams or funny interactions. The aim was to make scientific explanations accessible for children. A voiceover also explains how it is working.',
+                },
+                {
+                    'left': false,
+                    'media': {
+                        'type': 'img',
+                        'src': '../images/works/animooh2.jpg'
+                    },
+                    'title': '(Re)discover animals',
+                    'text': 'We chose a dozen of animals which are incredible : let\'s discover the pistol shrimp, the monkfish or the mimic octopus. The parent may learn as many things as his/her children...'
+                }
+            ],
             'next': 'jocondelab'
         },
         'jocondelab': {
