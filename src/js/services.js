@@ -18,7 +18,7 @@ angular.module('PortfolioServices', [])
             'sections': [
                 {
                     'left': true,
-                    'media':{
+                    'media': {
                         'type': 'img',
                         'src': '../images/works/lantern1.png'
                     },
@@ -69,10 +69,30 @@ angular.module('PortfolioServices', [])
             'visible': false,
             'subtitle': 'iOS application',
             'introduction': 'Trust is a mobile application that gives you access to a timeline of news.',
-            'purpose': 'The project has been suggested by the Thomson Reuters Foundation to the students of Gobelins. The aim was to propose an application bound to the digital natives to encourage them to read more news. We created a timeline that allows the user to better understand the news by having access to all of its history.',
-            'technologies': ['Objective-C'],
-            'team': ['Katia Moreira - Developer', 'Samuel Honingstein - Developer', 'Marjorie Rouffet - Designer', 'Thibault Terray - Designer'],
-            'video': '130524548',
+            'date': '2014',
+            'context': 'One week workshop in Amsterdam and 3 months realisation at Gobelins school',
+            'technologies': 'Objective, C',
+            'role': 'iOS Developer',
+            'sections': [
+                {
+                    'left': true,
+                    'media': {
+                        'type': 'img',
+                        'src': '../images/works/lantern1.png'
+                    },
+                    'title': 'Purpose of the project',
+                    'text': 'The project has been suggested by the Thomson Reuters Foundation to the students of Gobelins. The aim was to propose an application bound to the digital natives to encourage them to read more news. We created a timeline that allows the user to better understand the news by having access to all of its history.',
+                },
+                {
+                    'left': true,
+                    'media': {
+                        'type': 'img',
+                        'src': '../images/works/lantern1.png'
+                    },
+                    'title': 'Purpose of the project',
+                    'text': 'The project has been suggested by the Thomson Reuters Foundation to the students of Gobelins. The aim was to propose an application bound to the digital natives to encourage them to read more news. We created a timeline that allows the user to better understand the news by having access to all of its history.',
+                }
+            ],
             'next': 'animooh'
         },
         'animooh': {
@@ -81,8 +101,51 @@ angular.module('PortfolioServices', [])
             'color': 'red',
             'visible': false,
             'subtitle': 'iOS application',
-            'introduction': 'iOS application & connected object',
-            'video': '130524548',
+            'introduction': 'Animooh is an iPad application for children to make them discover incredible animals !',
+            'date': '2014',
+            'context': '3 months project at Gobelins school',
+            'technologies': 'Objective-C',
+            'role': 'iOS Developer',
+            'sections': [
+                {
+                    'left': true,
+                    'media': {
+                        'type': 'img',
+                        'src': '../images/works/lantern1.png'
+                    },
+                    'title': 'Purpose of the project',
+                    'text': 'The subject of the project was "augmented knowledge". We decided to create an application that uses popular science and interactions on a tablet to make the learning funnier.'
+                },
+                {
+                    'left': false,
+                    'media': {
+                        'type': 'video',
+                        'mockup': 'ipad-portrait',
+                        'src': '../videos/animooh/interaction.mp4'
+                    },
+                    'title': 'Play with animals',
+                    'text': 'Each animal has an extraordinary capability. The child can play and interact with the animal to realize what it is.'
+                },
+                {
+                    'left': true,
+                    'media': {
+                        'type': 'video',
+                        'mockup': 'ipad-portrait',
+                        'src': '../videos/animooh/setules.mp4'
+                    },
+                    'title': 'Understand how it works',
+                    'text': 'Each capability is explained thanks to diagrams or funny interactions. The aim was to make scientific explanations accessible for children. A voiceover also explains how it is working.',
+                },
+                {
+                    'left': false,
+                    'media': {
+                        'type': 'img',
+                        'src': '../images/works/lantern1.png'
+                    },
+                    'title': 'Discover or re-discover animals',
+                    'text': 'We chose a dozen of animals which are incredible : let\'s discover the pistol shrimp, the monkfish or the mimic octopus. The parent may learn as many things as his/her children...'
+                }
+            ],
             'next': 'simonpong'
         },
         'simonpong': {
