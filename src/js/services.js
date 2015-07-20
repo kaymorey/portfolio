@@ -154,7 +154,7 @@ angular.module('PortfolioServices', [])
             'color': 'blue',
             'visible': false,
             'subtitle': 'arduino experiment',
-            'introduction': 'iOS application & connected object',
+            'introduction': 'SimonPong is a custom arcade table created during an arduino workshop. It mixes two famous games : simon and pong.',
             'date': '2015',
             'context': '2 weeks workshop at Gobelins',
             'technologies': 'Arduino, Processing',
@@ -164,39 +164,28 @@ angular.module('PortfolioServices', [])
                     'left': true,
                     'media': {
                         'type': 'img',
-                        'src': '../images/works/animooh1.png'
+                        'src': '../images/works/simonpong1.jpg'
                     },
-                    'title': 'Purpose of the project',
-                    'text': 'The subject of the project was "augmented knowledge". We decided to create an application that uses popular science and interactions on a tablet to make the learning funnier.'
-                },
-                {
-                    'left': false,
-                    'media': {
-                        'type': 'video',
-                        'mockup': 'ipad-landscape',
-                        'src': '../videos/animooh/interaction.mp4'
-                    },
-                    'title': 'Play with animals',
-                    'text': 'Each animal has an extraordinary capability. The child can play and interact with the animal to realize what it is.'
-                },
-                {
-                    'left': true,
-                    'media': {
-                        'type': 'video',
-                        'mockup': 'ipad-landscape',
-                        'src': '../videos/animooh/setules.mp4'
-                    },
-                    'title': 'Understand how it works',
-                    'text': 'Each capability is explained thanks to diagrams or funny interactions. The aim was to make scientific explanations accessible for children. A voiceover also explains how it is working.',
+                    'title': 'Context of the project',
+                    'text': 'The project was created during a 2 weeks workshop : 1 week of conception and learning, and 1 week of realisation. The subject was to create a multiplayer game with arduino.'
                 },
                 {
                     'left': false,
                     'media': {
                         'type': 'img',
-                        'src': '../images/works/animooh2.jpg'
+                        'src': '../images/works/simonpong2.jpg'
                     },
-                    'title': '(Re)discover animals',
-                    'text': 'We chose a dozen of animals which are incredible : let\'s discover the pistol shrimp, the monkfish or the mimic octopus. The parent may learn as many things as his/her children...'
+                    'title': 'Manufacturing',
+                    'text': 'We had only a few days to drill holes, sand, paint and make a custom arcade table.'
+                },
+                {
+                    'left': true,
+                    'media': {
+                        'type': 'img',
+                        'src': '../images/works/simonpong(3).jpg'
+                    },
+                    'title': 'Development',
+                    'text': 'We developed the graphic game using Processing and the controls with arduino. Two aruidno boards controled 16 buttons, 16 lights and 4 potentiometers.'
                 }
             ],
             'next': 'jocondelab'
@@ -207,8 +196,11 @@ angular.module('PortfolioServices', [])
             'color': 'red',
             'visible': false,
             'subtitle': 'angularJS web experiment',
-            'introduction': 'iOS application & connected object',
-            'video': '130524548',
+            'introduction': 'JocondeLab is a website that allows users to discover some artworks in selected museums according to their tastes.',
+            'date': '2014',
+            'context': '4 months project at Gobelins school',
+            'technologies': 'AngularJS, HTML5/CSS3, Silex(PHP), Sphinx',
+            'role': 'Web developer',
             'next': 'lantern'
         }
     };
