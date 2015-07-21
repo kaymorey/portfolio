@@ -201,6 +201,44 @@ angular.module('PortfolioServices', [])
             'context': '4 months project at Gobelins school',
             'technologies': 'AngularJS, HTML5/CSS3, Silex(PHP), Sphinx',
             'role': 'Web developer',
+            'sections': [
+                {
+                    'left': true,
+                    'media': {
+                        'type': 'img',
+                        'src': '../images/works/jocondelab1.jpg'
+                    },
+                    'title': 'Purpose of the project',
+                    'text': 'The project was proposed by the french ministry of culture. They had a big database of french museums and its arworks, the goal was to use it to propose an experience or a service.'
+                },
+                {
+                    'left': false,
+                    'media': {
+                        'type': 'img',
+                        'src': '../images/works/jocondelab1.jpg'
+                    },
+                    'title': 'Choose a location',
+                    'text': 'First you have to choose a location. If you don\'t know where to go just select you departure city and the distance you want to browse. Otherwise, select a arrival city.'
+                },
+                {
+                    'left': true,
+                    'media': {
+                        'type': 'img',
+                        'src': '../images/works/jocondelab1(2).png'
+                    },
+                    'title': 'Indicate your tastes',
+                    'text': 'Then indicate your tastes by selecting for each proposition if you like it or not. As you can see we used an accordion to display the images. It\'s a custom javascript plugin tailor-made.'
+                },
+                {
+                    'left': false,
+                    'media': {
+                        'type': 'img',
+                        'src': '../images/works/jocondelab2.png'
+                    },
+                    'title': 'Choose your artworks',
+                    'text': 'According to your tastes and your destination the website proposes you to see some artworks in french museums. Like them or remove them. The website will then propose you to visit some other museums on your way to your arrival. As the database was very huge, I used Sphinx to make very fast requests.'
+                }
+            ],
             'next': 'lantern'
         }
     };
