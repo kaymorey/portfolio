@@ -404,7 +404,8 @@ section.home {
 .work__video--ipad-portrait {
   width: 397px;
   height: 571px;
-  background-image: url(../images/ipad-air-portrait.png) no-repeat top;
+  background-image: url(../images/ipad-air-portrait.png);
+  background-position: top;
 }
 .work__video--ipad-portrait video {
   max-width: calc(100% - 52px);
@@ -624,8 +625,6 @@ body:not(.pace-done) > :not(.pace), body:not(.pace-done):before, body:not(.pace-
   }
 }
 
-
-
 @font-face {
   font-family: 'yanone-light';
   src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot");
@@ -661,3 +660,5 @@ body:not(.pace-done) > :not(.pace), body:not(.pace-done):before, body:not(.pace-
   font-weight: normal;
   font-style: normal;
 }
+
+

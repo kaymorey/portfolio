@@ -347,7 +347,8 @@ section.home {
 .work__video--ipad-portrait {
     width: 397px;
     height: 571px;
-    background-image: url(../images/ipad-air-portrait.png) no-repeat top;
+    background-image: url(../images/ipad-air-portrait.png);
+    background-position: top;
 
     video {
         max-width: calc(100% - 52px);
