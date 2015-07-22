@@ -12,6 +12,8 @@ angular.module('PortfolioDirectives', [])
             var colors = ['#f5484a', '#21a5ad', '#fead13'];
             var i = 0;
 
+            var triangles = [];
+
             for (i = 0; i <= nbColumns; i++) {
                 var minX =  (window.innerWidth / nbColumns) * (i-1);
                 var maxX = window.innerWidth / nbColumns * i;
@@ -26,6 +28,12 @@ angular.module('PortfolioDirectives', [])
                 var color = colors[colorIndex];
 
                 var triangle = new Triangle(x, y, color, size, s, true);
+                triangles.push(triangle);
+            }
+            console.log(triangles.length);
+            for (i= 0; i < triangles.length; i++) {
+                triangles[i].hide();
+                triangles[i].showAnimated();
             }
         }
     }

@@ -47,6 +47,20 @@ var Triangle = (function() {
         }
     }
 
+    Triangle.prototype.hide = function() {
+        this.triangle.transform('t-300,-300');
+        this.unfilled.transform('t-300,-300');
+    }
+
+    Triangle.prototype.showAnimated = function() {
+        this.triangle.animate({
+            transform: 't0,0'
+        }, 1000, mina.easeOut);
+        this.unfilled.animate({
+            transform: 't0,0'
+        }, 1000, mina.easeOut);
+    }
+
     Triangle.prototype.hoverAnimation = function() {
         var self = this;
 
