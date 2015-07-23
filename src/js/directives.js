@@ -6,25 +6,21 @@ angular.module('PortfolioDirectives', [])
         link: function(scope, element, attrs) {
             var s = Snap('#home-svg');
             var size = 30;
-            var nbColumns = 10;
+            var nbTriangles = 20;
 
-            var heights = [0.7, 0.8, 0.6, 0.5, 0.6, 0.7, 0.4, 0.1, 0.2, 0.3, 0.1];
+            var heights = [0.8, 0.72, 0.6, 0.88, 0.6, 0.78, 0.65, 0.33, 0.53, 0.32, 0.7, 0.45, 0.58, 0.12, 0.38, 0.21, 0.63, 0.32, 0.15, 0.08];
             var colors = ['#f5484a', '#21a5ad', '#fead13'];
             var i = 0;
+            var topIndexes = [0, 1, 2, 4, 7, 8, 9, 13, 14];
+            var bottomIndexes = [3, 5, 6, 10, 11, 12, 15, 16, 17, 18, 19];
 
             var triangles = [];
 
-            for (i = 0; i <= nbColumns; i++) {
-                var minX =  (window.innerWidth / nbColumns) * (i-1);
-                var maxX = window.innerWidth / nbColumns * i;
+            for (i = 0; i < nbTriangles; i++) {
+                var x =  window.innerWidth / nbTriangles * i + window.innerWidth / nbTriangles / 2;
+                var y = heights[i] * window.innerHeight;
 
-                var minY =  heights[i] * window.innerHeight;
-                var maxY = heights[i] * window.innerHeight + window.innerHeight * 0.1;
-
-                var x = Math.floor(Math.random() * (maxX - minX) + minX);
-                var y = Math.floor(Math.random() * (maxY - minY) + minY);
-
-                var colorIndex = Math.floor(Math.random() * 3);
+                var colorIndex = i % 3
                 var color = colors[colorIndex];
 
                 var triangle = new Triangle(x, y, color, size, s, true);
@@ -32,7 +28,13 @@ angular.module('PortfolioDirectives', [])
             }
             console.log(triangles.length);
             for (i= 0; i < triangles.length; i++) {
-                triangles[i].hide();
+                if (topIndexes.indexOf(i) != -1) {
+                    console.log('top'+i);
+                    triangles[i].hide('top');
+                }
+                else {
+                    triangles[i].hide('bottom');
+                }
                 triangles[i].showAnimated();
             }
         }

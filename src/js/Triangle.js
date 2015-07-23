@@ -47,9 +47,13 @@ var Triangle = (function() {
         }
     }
 
-    Triangle.prototype.hide = function() {
-        this.triangle.transform('t-300,-300');
-        this.unfilled.transform('t-300,-300');
+    Triangle.prototype.hide = function(position) {
+        var transform = 't0,-500';
+        if (position == 'bottom') {
+            transform = 't0,500';
+        }
+        this.triangle.transform(transform);
+        this.unfilled.transform(transform);
     }
 
     Triangle.prototype.showAnimated = function() {
