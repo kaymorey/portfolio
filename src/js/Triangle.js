@@ -48,21 +48,25 @@ var Triangle = (function() {
     }
 
     Triangle.prototype.hide = function(position) {
-        var transform = 't0,-500';
+        var transform = 't0,-600';
         if (position == 'bottom') {
-            transform = 't0,500';
+            transform = 't0,600';
         }
         this.triangle.transform(transform);
         this.unfilled.transform(transform);
     }
 
-    Triangle.prototype.showAnimated = function() {
-        this.triangle.animate({
-            transform: 't0,0'
-        }, 1000, mina.easeOut);
-        this.unfilled.animate({
-            transform: 't0,0'
-        }, 1000, mina.easeOut);
+    Triangle.prototype.showAnimatedWithDelay = function(delay) {
+        var self = this;
+
+        setTimeout(function() {
+            self.triangle.animate({
+                transform: 't0,0'
+            }, 800, mina.easeOut);
+            self.unfilled.animate({
+                transform: 't0,0'
+            }, 700, mina.easeOut);
+        }, delay + 800);
     }
 
     Triangle.prototype.hoverAnimation = function() {

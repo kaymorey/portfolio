@@ -8,11 +8,11 @@ angular.module('PortfolioDirectives', [])
             var size = 30;
             var nbTriangles = 20;
 
-            var heights = [0.8, 0.72, 0.6, 0.88, 0.6, 0.78, 0.65, 0.33, 0.53, 0.32, 0.7, 0.45, 0.58, 0.12, 0.38, 0.21, 0.63, 0.32, 0.15, 0.08];
+            var heights = [0.8, 0.72, 0.6, 0.88, 0.6, 0.78, 0.65, 0.33, 0.7, 0.25, 0.75, 0.45, 0.58, 0.12, 0.38, 0.21, 0.63, 0.32, 0.15, 0.08];
             var colors = ['#f5484a', '#21a5ad', '#fead13'];
             var i = 0;
-            var topIndexes = [0, 1, 2, 4, 7, 8, 9, 13, 14];
-            var bottomIndexes = [3, 5, 6, 10, 11, 12, 15, 16, 17, 18, 19];
+            var topIndexes = [0, 1, 2, 4, 6, 7, 9, 13, 14];
+            var bottomIndexes = [3, 5, 8, 10, 11, 12, 15, 16, 17, 18, 19];
 
             var triangles = [];
 
@@ -26,16 +26,23 @@ angular.module('PortfolioDirectives', [])
                 var triangle = new Triangle(x, y, color, size, s, true);
                 triangles.push(triangle);
             }
-            console.log(triangles.length);
+
             for (i= 0; i < triangles.length; i++) {
                 if (topIndexes.indexOf(i) != -1) {
-                    console.log('top'+i);
                     triangles[i].hide('top');
                 }
                 else {
                     triangles[i].hide('bottom');
                 }
-                triangles[i].showAnimated();
+            }
+            triangles = shuffle(triangles);
+            for (i= 0; i < triangles.length; i++) {
+                triangles[i].showAnimatedWithDelay(i*40);
+            }
+
+            function shuffle(o){
+                for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+                    return o;
             }
         }
     }

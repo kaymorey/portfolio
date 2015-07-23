@@ -1,7 +1,12 @@
 angular.module('PortfolioControllers', ['PortfolioServices'])
 
-.controller('HomeCtrl', function HomeCtrl($scope) {
-
+.controller('HomeCtrl', function HomeCtrl($scope, $timeout, $location) {
+    $scope.goTo = function(path) {
+        $timeout(function() {
+            $location.path(path);
+            // console.log(path);
+        }, 300);
+    }
 })
 
 .controller('WorksCtrl', function WorksCtrl($scope, WorksService) {

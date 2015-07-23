@@ -10,6 +10,6 @@
         </div>
         <svg class="full-screen" id="home-svg" home-svg></svg>
     </div>
-    <a href="#/works" class="home-link home-link__project">My Projects</a>
-    <a href="#" class="home-link home-link__about">About me</a>
+    <button ng-click="clickedProjects=true; goTo('/works')" class="home-link home-link__project ng-class:{'home-link--clicked': clickedProjects}">My Projects</button>
+    <button ng-click="clickedAbout=true; goTo('/about')" class="home-link home-link__about ng-class:{'home-link--clicked': clickedAbout}">About me</button>
 </section>
