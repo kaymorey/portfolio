@@ -45,7 +45,71 @@ a {
 }
 
 /***********************
-*        HOME          *
+*         MENU         *
+************************/
+.menu {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 300;
+    cursor: pointer;
+}
+
+.menu__link {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 2px;
+    border: none;
+    outline: 0;
+    padding: 0;
+    text-align: left;
+    background-color: #FFF;
+
+    @include transition(background 0s 0.3s);
+}
+.menu__link::before, .menu__link::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: #FFF;
+
+    @include transition-duration(0.3s, 0.3s);
+    @include transition-delay(0.3s, 0s);
+}
+.menu__link::before {
+    position: absolute;
+    top: -6px;
+
+    @include transition-property(top, transform);
+}
+.menu__link::after {
+    position: absolute;
+    bottom: -6px;
+
+    @include transition-property(bottom, transform);
+}
+
+.menu--is-opened .menu__link {
+    background: none;
+}
+.menu--is-opened .menu__link::before {
+    top: 0;
+    @include transform(rotate(45deg));
+}
+.menu--is-opened .menu__link::after {
+    bottom: 0;
+    @include transform(rotate(-45deg));
+}
+.menu--is-opened .menu__link {
+    &::before, &::after {
+        @include transition-delay(0s, 0.3s);
+    }
+}
+
+/***********************
+*         HOME         *
 ************************/
 
 section.home {
