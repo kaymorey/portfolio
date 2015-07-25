@@ -57,3 +57,15 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'wigrum';
+    src: url('../fonts/wigrum/wigrum-regular.eot');
+    src: url('../fonts/wigrum/wigrum-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/wigrum/wigrum-regular.woff2') format('woff2'),
+         url('../fonts/wigrum/wigrum-regular.woff') format('woff'),
+         url('../fonts/wigrum/wigrum-regular.ttf') format('truetype'),
+         url('../fonts/wigrum/wigrum-regular.svg#wigrumregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

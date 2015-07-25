@@ -23,4 +23,6 @@ angular.module('PortfolioControllers', ['PortfolioServices'])
 .controller('WorkCtrl', function WorkCtrl($scope, $routeParams, WorksService) {
     var identifier = $routeParams.identifier;
     $scope.work = WorksService.getWork(identifier);
+
+    $scope.works = WorksService.getWorks();
 });

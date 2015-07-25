@@ -1,3 +1,25 @@
 <nav class="menu ng-class:{'menu--is-opened': openedMenu}" ng-click="openedMenu=!openedMenu">
-    <button class="menu__link"></button>
+    <button class="menu__button">
+        <span class="menu__button--middle"></span>
+    </button>
+    <div class="menu__content">
+        <ul>
+            <li class="menu-content__item">
+                <a href="#/" class="menu-content__link">Home</a>
+            </li>
+            <li class="menu-content__item">
+                <a href="#/works" class="menu-content__link">Projects</a>
+                <ul class="menu-content__submenu">
+                    <li ng-repeat="(identifier, work) in works">
+                        <a ng-href="#/works/{{ identifier }}" class="menu-content__link">
+                            {{ work.title }}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-content__item">
+                <a href="#" class="menu-content__link">About</a>
+            </li>
+        </ul>
+    </div>
 </nav>

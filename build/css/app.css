@@ -89,6 +89,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'wigrum';
+  src: url("../fonts/wigrum/wigrum-regular.eot");
+  src: url("../fonts/wigrum/wigrum-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/wigrum/wigrum-regular.woff2") format("woff2"), url("../fonts/wigrum/wigrum-regular.woff") format("woff"), url("../fonts/wigrum/wigrum-regular.ttf") format("truetype"), url("../fonts/wigrum/wigrum-regular.svg#wigrumregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 a {
   text-decoration: none;
 }
@@ -120,22 +127,33 @@ a {
 *         MENU         *
 ************************/
 .menu {
-  position: absolute;
-  top: 30px;
-  left: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 300;
-  cursor: pointer;
 }
 
-.menu__link {
+/* ------ BUTTON ------ */
+.menu__button {
   display: inline-block;
   position: relative;
+  z-index: 300;
   width: 20px;
-  height: 2px;
+  height: 20px;
+  margin: 30px 0 0 30px;
   border: none;
   outline: 0;
   padding: 0;
   text-align: left;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.menu__button--middle {
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  vertical-align: middle;
   background-color: #FFF;
   -moz-transition: background 0s 0.3s;
   -o-transition: background 0s 0.3s;
@@ -144,7 +162,7 @@ a {
   transition: background 0s 0.3s;
 }
 
-.menu__link::before, .menu__link::after {
+.menu__button::before, .menu__button::after {
   content: '';
   display: inline-block;
   width: 100%;
@@ -160,49 +178,84 @@ a {
   transition-delay: 0.3s, 0s;
 }
 
-.menu__link::before {
+.menu__button::before {
   position: absolute;
-  top: -6px;
+  top: 4px;
   -moz-transition-property: top, -moz-transform;
   -o-transition-property: top, -o-transform;
   -webkit-transition-property: top, -webkit-transform;
   transition-property: top, transform;
 }
 
-.menu__link::after {
+.menu__button::after {
   position: absolute;
-  bottom: -6px;
+  bottom: 0px;
   -moz-transition-property: bottom, -moz-transform;
   -o-transition-property: bottom, -o-transform;
   -webkit-transition-property: bottom, -webkit-transform;
   transition-property: bottom, transform;
 }
 
-.menu--is-opened .menu__link {
+.menu--is-opened .menu__button--middle {
   background: none;
 }
 
-.menu--is-opened .menu__link::before {
-  top: 0;
+.menu--is-opened .menu__button::before {
+  top: 11px;
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.menu--is-opened .menu__link::after {
-  bottom: 0;
+.menu--is-opened .menu__button::after {
+  bottom: 7px;
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-.menu--is-opened .menu__link::before, .menu--is-opened .menu__link::after {
+.menu--is-opened .menu__button::before, .menu--is-opened .menu__button::after {
   -moz-transition-delay: 0s, 0.3s;
   -o-transition-delay: 0s, 0.3s;
   -webkit-transition-delay: 0s, 0.3s;
   transition-delay: 0s, 0.3s;
+}
+
+/* ------ CONTENT ------ */
+.menu__content {
+  position: absolute;
+  top: 0;
+  left: -320px;
+  width: 220px;
+  height: 100vh;
+  padding: 100px 0 0 100px;
+  background-color: #f5484a;
+  -moz-transition: left 0.5s ease-out;
+  -o-transition: left 0.5s ease-out;
+  -webkit-transition: left 0.5s ease-out;
+  transition: left 0.5s ease-out;
+}
+
+.menu-content__item {
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+.menu-content__link {
+  color: #FFF;
+  font-size: 23px;
+  font-family: 'yanone-light', Arial, sans-serif;
+  line-height: 32px;
+}
+
+.menu-content__submenu {
+  padding-left: 15px;
+}
+
+.menu--is-opened .menu__content {
+  left: 0;
 }
 
 /***********************
@@ -408,8 +461,8 @@ section.home {
 
 .work__subtitle {
   padding: 40px 0 15px 0;
-  font-family: 'yanone-light', Arial, sans-serif;
-  font-size: 40px;
+  font-family: 'wigrum', Arial, sans-serif;
+  font-size: 35px;
   color: #f5484a;
 }
 
@@ -648,6 +701,8 @@ body:not(.pace-done) > :not(.pace), body:not(.pace-done):before, body:not(.pace-
   background-color: #FFF;
 }
 
+
+
 @font-face {
   font-family: 'yanone-light';
   src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot");
@@ -683,5 +738,10 @@ body:not(.pace-done) > :not(.pace), body:not(.pace-done):before, body:not(.pace-
   font-weight: normal;
   font-style: normal;
 }
-
-
+@font-face {
+  font-family: 'wigrum';
+  src: url("../fonts/wigrum/wigrum-regular.eot");
+  src: url("../fonts/wigrum/wigrum-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/wigrum/wigrum-regular.woff2") format("woff2"), url("../fonts/wigrum/wigrum-regular.woff") format("woff"), url("../fonts/wigrum/wigrum-regular.ttf") format("truetype"), url("../fonts/wigrum/wigrum-regular.svg#wigrumregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
