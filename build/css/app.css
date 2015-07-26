@@ -1,3 +1,5 @@
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -131,16 +133,18 @@ a {
   top: 0;
   left: 0;
   z-index: 300;
+  width: 390px;
+  height: 600px;
 }
 
 /* ------ BUTTON ------ */
 .menu__button {
   display: inline-block;
-  position: relative;
+  position: absolute;
   z-index: 300;
   width: 20px;
   height: 20px;
-  margin: 30px 0 0 30px;
+  margin: 20px 0 0 20px;
   border: none;
   outline: 0;
   padding: 0;
@@ -227,11 +231,11 @@ a {
 .menu__content {
   position: absolute;
   top: 0;
-  left: -320px;
-  width: 220px;
-  height: 100vh;
-  padding: 100px 0 0 100px;
-  background-color: #f5484a;
+  left: -300px;
+  width: 100%;
+  height: 100%;
+  padding: 70px 0 0 70px;
+  background: url(../images/background-menu.png) no-repeat;
   -moz-transition: left 0.5s ease-out;
   -o-transition: left 0.5s ease-out;
   -webkit-transition: left 0.5s ease-out;
@@ -245,9 +249,9 @@ a {
 
 .menu-content__link {
   color: #FFF;
-  font-size: 23px;
+  font-size: 21px;
   font-family: 'yanone-light', Arial, sans-serif;
-  line-height: 32px;
+  line-height: 30px;
 }
 
 .menu-content__submenu {
@@ -700,8 +704,6 @@ body:not(.pace-done) > :not(.pace), body:not(.pace-done):before, body:not(.pace-
   left: 0;
   background-color: #FFF;
 }
-
-
 
 @font-face {
   font-family: 'yanone-light';
