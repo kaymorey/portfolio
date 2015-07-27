@@ -29,10 +29,10 @@ angular.module('PortfolioDirectives', [])
 
             for (i= 0; i < triangles.length; i++) {
                 if (topIndexes.indexOf(i) != -1) {
-                    triangles[i].hide('top');
+                    triangles[i].translate('top');
                 }
                 else {
-                    triangles[i].hide('bottom');
+                    triangles[i].translate('bottom');
                 }
             }
             triangles = shuffle(triangles);
@@ -48,28 +48,32 @@ angular.module('PortfolioDirectives', [])
     }
 })
 
-.directive('titleSvg', function() {
+.directive('titleSvg', function($timeout) {
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
-            var s = Snap('#title-svg');
-            var size = 15;
-            var colors = ['#fead13', '#21a5ad', '#f5484a'];
-            var angles = [0, 65, 60];
-            var posX = [28, 46, 56];
-            var posY = [-10, -27, -4];
-            var i = 0;
+            $timeout(function() {
+                var s = Snap('#'+attrs.id);
+                var size = 15;
+                var colors = ['#fead13', '#21a5ad', '#f5484a'];
+                var angles = [0, 65, 60];
+                var posX = [28, 46, 56];
+                var posY = [-10, -27, -4];
+                var i = 0;
 
-            for (i = 0; i < 3; i++) {
-                var x = posX[i];
-                var y = posY[i];
+                var triangles = [];
 
-                var color = colors[i];
-                var angle = angles[i];
+                for (i = 0; i < 3; i++) {
+                    var x = posX[i];
+                    var y = posY[i];
 
-                var triangle = new Triangle(x, y, color, size, s, false);
-                triangle.rotate(angle);
-            }
+                    var color = colors[i];
+                    var angle = angles[i];
+
+                    var triangle = new Triangle(x, y, color, size, s, false);
+                    triangle.rotate(angle);
+                }
+            });
         }
     }
 });

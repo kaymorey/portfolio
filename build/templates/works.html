@@ -3,8 +3,11 @@
     <div class="full-screen works__container">
         <ul class="works__items">
             <li ng-repeat="(identifier, work) in works">
-                <a ng-href="#/works/{{ identifier }}" ng-mouseover="changeBackground(identifier)" class="works__link" ng-class="{'works__link--active': work.visible}">
-                    {{ work.title }}
+                <a ng-href="#/works/{{ identifier }}" ng-mouseover="changeBackground(identifier)" class="works__link title-svg" ng-class="{'works__link--active': work.visible}">
+                    <h2 class="title-svg__content works__title">
+                        {{ work.title }}
+                        <svg ng-attr-id="{{ 'title-svg-'+identifier }}" data-identifier="{{ $loop }}" title-svg></svg>
+                    </h2>
                     <span class="works__description {{ work.color }}">{{ work.subtitle }}</span>
                 </a>
             </li>

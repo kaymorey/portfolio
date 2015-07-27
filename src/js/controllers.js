@@ -4,7 +4,6 @@ angular.module('PortfolioControllers', ['PortfolioServices'])
     $scope.goTo = function(path) {
         $timeout(function() {
             $location.path(path);
-            // console.log(path);
         }, 300);
     }
 })
@@ -25,4 +24,5 @@ angular.module('PortfolioControllers', ['PortfolioServices'])
     $scope.work = WorksService.getWork(identifier);
 
     $scope.works = WorksService.getWorks();
+    $scope.nextWork = $scope.works[$scope.work.next];
 });

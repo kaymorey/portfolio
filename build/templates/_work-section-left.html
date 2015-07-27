@@ -7,8 +7,10 @@
 <div ng-if="section.media.type == 'img'" class="work__img">
     <img ng-src="{{ section.media.src }}" alt="">
 </div>
-<div ng-if="section.media.type == 'video'" class="work__img work__video work__video--{{ section.media.mockup }}">
-    <video autoplay loop>
-        <source ng-src="{{ section.media.src }}" type="video/mp4">
-    </video>
+<div ng-if="section.media.type == 'video'" class="work__content-video">
+    <div class="work__img work__video work__video--{{ section.media.mockup }}">
+        <video autoplay loop>
+            <source ng-src="{{ section.media.src }}" type="video/mp4">
+        </video>
+    </div>
 </div>

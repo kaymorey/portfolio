@@ -1,4 +1,45 @@
-
+@font-face {
+  font-family: 'yanone-light';
+  src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot");
+  src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.woff2") format("woff2"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.woff") format("woff"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.ttf") format("truetype"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'yanone';
+  src: url("../fonts/yanone/yanonekaffeesatz-regular-webfont.eot");
+  src: url("../fonts/yanone/yanonekaffeesatz-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.woff2") format("woff2"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.woff") format("woff"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.ttf") format("truetype"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzlight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'jennasue';
+  src: url("../fonts/jenna/jennasue-webfont.eot");
+  src: url("../fonts/jenna/jennasue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/jenna/jennasue-webfont.woff2") format("woff2"), url("../fonts/jenna/jennasue-webfont.woff") format("woff"), url("../fonts/jenna/jennasue-webfont.ttf") format("truetype"), url("../fonts/jenna/jennasue-webfont.svg#jenna_sueregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'sunn';
+  src: url("../fonts/sunn/sunn-webfont.eot");
+  src: url("../fonts/sunn/sunn-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sunn/sunn-webfont.woff2") format("woff2"), url("../fonts/sunn/sunn-webfont.woff") format("woff"), url("../fonts/sunn/sunn-webfont.ttf") format("truetype"), url("../fonts/sunn/sunn-webfont.svg#sunnregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'wolf';
+  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot");
+  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/wolf/wolf_in_the_city-webfont.woff2") format("woff2"), url("../fonts/wolf/wolf_in_the_city-webfont.woff") format("woff"), url("../fonts/wolf/wolf_in_the_city-webfont.ttf") format("truetype"), url("../fonts/wolf/wolf_in_the_city-webfont.svg#wolf_in_the_cityregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'wigrum';
+  src: url("../fonts/wigrum/wigrum-regular.eot");
+  src: url("../fonts/wigrum/wigrum-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/wigrum/wigrum-regular.woff2") format("woff2"), url("../fonts/wigrum/wigrum-regular.woff") format("woff"), url("../fonts/wigrum/wigrum-regular.ttf") format("truetype"), url("../fonts/wigrum/wigrum-regular.svg#wigrumregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -133,8 +174,6 @@ a {
   top: 0;
   left: 0;
   z-index: 300;
-  width: 390px;
-  height: 600px;
 }
 
 /* ------ BUTTON ------ */
@@ -232,8 +271,8 @@ a {
   position: absolute;
   top: 0;
   left: -300px;
-  width: 100%;
-  height: 100%;
+  width: 390px;
+  height: 600px;
   padding: 70px 0 0 70px;
   background: url(../images/background-menu.png) no-repeat;
   -moz-transition: left 0.5s ease-out;
@@ -406,6 +445,10 @@ section.home {
   padding-top: 0;
 }
 
+.works__title {
+  display: inline-block;
+}
+
 .works__link {
   display: inline-block;
   width: 100%;
@@ -419,6 +462,20 @@ section.home {
 
 .works__link:hover {
   color: #1e1a1b;
+}
+
+.works__link svg {
+  top: 10px;
+  opacity: 0;
+  -moz-transition: opacity 0.3s ease-out, top 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out, top 0.3s ease-out;
+  -webkit-transition: opacity 0.3s ease-out, top 0.3s ease-out;
+  transition: opacity 0.3s ease-out, top 0.3s ease-out;
+}
+
+.works__link--active svg {
+  top: 0;
+  opacity: 1;
 }
 
 .works__description {
@@ -496,7 +553,7 @@ section.home {
 .work__section {
   width: 80%;
   max-width: 1280px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 80px auto;
   font-size: 0;
 }
 
@@ -555,13 +612,19 @@ section.home {
 /* -------- MEDIAS ------- */
 .work__img {
   width: 50%;
-  max-width: 450px;
+  max-width: 100%;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
 }
 .work__img img {
   max-width: 100%;
+}
+
+.work__content-video {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
 }
 
 .work__video {
@@ -578,8 +641,8 @@ section.home {
 }
 .work__video--ipad-portrait video {
   max-width: calc(100% - 52px);
-  border: solid #888 1px;
   margin-top: 52px;
+  border: solid #888 1px;
 }
 
 .work__video--ipad-landscape {
@@ -591,6 +654,17 @@ section.home {
 .work__video--ipad-landscape video {
   max-width: calc(100% - 86px);
   margin-top: 15px;
+  border: solid #888 1px;
+}
+
+.work__video--iphone-portrait {
+  width: 290px;
+  height: 619px;
+  background-image: url(../images/iphone-portrait.png);
+}
+.work__video--iphone-portrait video {
+  max-width: calc(100% - 34px);
+  margin-top: 71px;
   border: solid #888 1px;
 }
 
@@ -621,10 +695,11 @@ section.home {
 }
 
 .work-nav__background {
-  max-width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
+  min-width: 100%;
+  min-height: 100%;
   opacity: 0.6;
   -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
@@ -638,13 +713,11 @@ section.home {
   right: 0;
   bottom: 0;
   left: 0;
-  color: #fead13;
 }
 
 .work-nav__link--back {
   width: 35%;
   background-color: #fff9ee;
-  color: #fead13;
 }
 
 .work-nav__link--next {
@@ -654,7 +727,6 @@ section.home {
   vertical-align: bottom;
   background-color: #333333;
   background-position: center;
-  color: #FFF;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -705,45 +777,4 @@ body:not(.pace-done) > :not(.pace), body:not(.pace-done):before, body:not(.pace-
   background-color: #FFF;
 }
 
-@font-face {
-  font-family: 'yanone-light';
-  src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot");
-  src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.woff2") format("woff2"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.woff") format("woff"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.ttf") format("truetype"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'yanone';
-  src: url("../fonts/yanone/yanonekaffeesatz-regular-webfont.eot");
-  src: url("../fonts/yanone/yanonekaffeesatz-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.woff2") format("woff2"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.woff") format("woff"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.ttf") format("truetype"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzlight") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'jennasue';
-  src: url("../fonts/jenna/jennasue-webfont.eot");
-  src: url("../fonts/jenna/jennasue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/jenna/jennasue-webfont.woff2") format("woff2"), url("../fonts/jenna/jennasue-webfont.woff") format("woff"), url("../fonts/jenna/jennasue-webfont.ttf") format("truetype"), url("../fonts/jenna/jennasue-webfont.svg#jenna_sueregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'sunn';
-  src: url("../fonts/sunn/sunn-webfont.eot");
-  src: url("../fonts/sunn/sunn-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sunn/sunn-webfont.woff2") format("woff2"), url("../fonts/sunn/sunn-webfont.woff") format("woff"), url("../fonts/sunn/sunn-webfont.ttf") format("truetype"), url("../fonts/sunn/sunn-webfont.svg#sunnregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'wolf';
-  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot");
-  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/wolf/wolf_in_the_city-webfont.woff2") format("woff2"), url("../fonts/wolf/wolf_in_the_city-webfont.woff") format("woff"), url("../fonts/wolf/wolf_in_the_city-webfont.ttf") format("truetype"), url("../fonts/wolf/wolf_in_the_city-webfont.svg#wolf_in_the_cityregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'wigrum';
-  src: url("../fonts/wigrum/wigrum-regular.eot");
-  src: url("../fonts/wigrum/wigrum-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/wigrum/wigrum-regular.woff2") format("woff2"), url("../fonts/wigrum/wigrum-regular.woff") format("woff"), url("../fonts/wigrum/wigrum-regular.ttf") format("truetype"), url("../fonts/wigrum/wigrum-regular.svg#wigrumregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
+

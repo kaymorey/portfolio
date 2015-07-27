@@ -76,21 +76,33 @@ angular.module('PortfolioServices', [])
             'sections': [
                 {
                     'left': true,
-                    'media': {
-                        'type': 'img',
-                        'src': '../images/works/lantern1.png'
+                    'media':{
+                        'type': 'video',
+                        'mockup': 'iphone-portrait',
+                        'src': '../videos/trust/covers.mp4'
                     },
                     'title': 'Purpose of the project',
-                    'text': 'The project has been suggested by the Thomson Reuters Foundation to the students of Gobelins. The aim was to propose an application bound to the digital natives to encourage them to read more news. We created a timeline that allows the user to better understand the news by having access to all of its history.',
+                    'text': 'The project has been suggested by the Thomson Reuters Foundation to the students of Gobelins. The aim was to propose an application bound to the digital natives to encourage them to read more news. We created a timeline that allows the user to better understand the news by having access to all of its history.'
+                },
+                {
+                    'left': false,
+                    'media':{
+                        'type': 'video',
+                        'mockup': 'iphone-portrait',
+                        'src': '../videos/trust/timeline.mp4'
+                    },
+                    'title': 'Navigate through the timeline',
+                    'text': 'Once you chose a news theme, you can access to its timeline. The contents are ordered so that you can understand the history of the news and how we get to the actual situation.'
                 },
                 {
                     'left': true,
-                    'media': {
-                        'type': 'img',
-                        'src': '../images/works/lantern1.png'
+                    'media':{
+                        'type': 'video',
+                        'mockup': 'iphone-portrait',
+                        'src': '../videos/trust/article.mp4'
                     },
-                    'title': 'Purpose of the project',
-                    'text': 'The project has been suggested by the Thomson Reuters Foundation to the students of Gobelins. The aim was to propose an application bound to the digital natives to encourage them to read more news. We created a timeline that allows the user to better understand the news by having access to all of its history.',
+                    'title': 'Access to linked articles',
+                    'text': 'Choose an article and read its content. If it contains medias you can open it in a custom lightbox and view it in portrait but also in landscape. At the end of the article you can access to a sticky linked content which will enrich the information you just read.'
                 }
             ],
             'next': 'animooh'

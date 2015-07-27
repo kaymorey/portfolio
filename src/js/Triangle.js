@@ -12,6 +12,8 @@ var Triangle = (function() {
 
         this.color = color;
 
+        this.angle = 0;
+
         this.createTriangle(home);
     }
 
@@ -47,7 +49,7 @@ var Triangle = (function() {
         }
     }
 
-    Triangle.prototype.hide = function(position) {
+    Triangle.prototype.translate = function(position) {
         var transform = 't0,-600';
         if (position == 'bottom') {
             transform = 't0,600';
@@ -89,7 +91,23 @@ var Triangle = (function() {
     }
 
     Triangle.prototype.rotate = function(angle) {
+        this.angle = angle;
         this.triangle.transform('r'+angle);
+    }
+
+    Triangle.prototype.hideForTitles = function() {
+        this.triangle.transform('r'+this.angle+'t0,20');
+        this.triangle.attr({
+            opacity: 0
+        });
+    }
+
+    Triangle.prototype.showForTitles = function(delay) {
+        var self = this;
+        this.triangle.animate({
+            transform: 'r'+self.angle+'t0,0',
+            opacity: 1
+        }, 300, mina.easeOut);
     }
 
     return Triangle;

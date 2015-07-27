@@ -52,8 +52,6 @@ a {
     top: 0;
     left: 0;
     z-index: 300;
-    width: 390px;
-    height: 600px;
 
     // background-color: $red-color;
 }
@@ -131,8 +129,8 @@ a {
     top: 0;
     left: -300px;
 
-    width: 100%;
-    height: 100%;
+    width: 390px;
+    height: 600px;
     padding: 70px 0 0 70px;
 
     background: url(../images/background-menu.png) no-repeat;
@@ -308,6 +306,10 @@ section.home {
     }
 }
 
+.works__title {
+    display: inline-block;
+}
+
 .works__link {
     display: inline-block;
     width: 100%;
@@ -320,6 +322,18 @@ section.home {
 
 .works__link:hover {
     color: #1e1a1b;
+}
+
+.works__link svg {
+    top: 10px;
+
+    opacity: 0;
+
+    @include transition(opacity 0.3s ease-out, top 0.3s ease-out);
+}
+.works__link--active svg {
+    top: 0;
+    opacity: 1;
 }
 
 .works__description {
@@ -397,7 +411,7 @@ section.home {
 .work__section {
     width: 80%;
     max-width: 1280px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 80px auto;
     font-size: 0;
 }
 
@@ -457,7 +471,7 @@ section.home {
 
 .work__img {
     width: 50%;
-    max-width: 450px;
+    max-width: 100%;
     display: inline-block;
     text-align: center;
     vertical-align: middle;
@@ -467,6 +481,11 @@ section.home {
     }
 }
 
+.work__content-video {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+}
 .work__video {
     text-align: center;
     background-size: contain;
@@ -480,8 +499,8 @@ section.home {
 
     video {
         max-width: calc(100% - 52px);
-        border: solid #888 1px;
         margin-top: 52px;
+        border: solid #888 1px;
     }
 }
 .work__video--ipad-landscape {
@@ -493,6 +512,17 @@ section.home {
     video {
         max-width: calc(100% - 86px);
         margin-top: 15px;
+        border: solid #888 1px;
+    }
+}
+.work__video--iphone-portrait  {
+    width: 290px;
+    height: 619px;
+    background-image: url(../images/iphone-portrait.png);
+
+    video {
+        max-width: calc(100% - 34px);
+        margin-top: 71px;
         border: solid #888 1px;
     }
 }
@@ -526,10 +556,13 @@ section.home {
 }
 
 .work-nav__background {
-    max-width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
+
+    min-width: 100%;
+    min-height: 100%;
+
     opacity: 0.6;
 
     @include transform(translateX(-50%) translateY(-50%));
@@ -541,13 +574,11 @@ section.home {
     right: 0;
     bottom: 0;
     left: 0;
-    color: $yellow-color;
 }
 
 .work-nav__link--back {
     width: 35%;
     background-color: $beige-color;
-    color: $yellow-color;
 }
 .work-nav__link--next {
     width: 65%;
@@ -556,7 +587,6 @@ section.home {
     vertical-align: bottom;
     background-color: $grey-color;
     background-position: center;
-    color: #FFF;
 
     -webkit-background-size: cover;
        -moz-background-size: cover;
