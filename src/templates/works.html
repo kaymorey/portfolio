@@ -2,6 +2,8 @@
 <section class="full-screen works">
     <ng-include src="'templates/_menu.html'"></ng-include>
     <div class="full-screen works__container">
+        <img src="../images/works/{{ activeBackground }}" alt="" class="works__background full-img">
+        <div class="works__overlay full-screen"></div>
         <ul class="works__items">
             <li ng-repeat="(identifier, work) in works">
                 <a ng-href="#/works/{{ identifier }}" ng-mouseover="changeBackground(identifier)" class="works__link title-svg" ng-class="{'works__link--active': work.visible}">
@@ -14,5 +16,4 @@
             </li>
         </ul>
     </div>
-    <div ng-repeat="work in works" ng-show="work.visible" class="full-screen works__background" ng-class="{'works__background--visible': work.visible}" style="background-image: url(../images/works/{{ work.image }})"></div>
 </section>

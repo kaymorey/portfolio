@@ -20,7 +20,7 @@ app.config(['$routeProvider',
             controller: 'WorkCtrl'
         })
         .when('/about', {
-            remplateUrl: 'templates/about.html',
+            templateUrl: 'templates/about.html',
             controller: 'AboutCtrl'
         })
         .otherwise({

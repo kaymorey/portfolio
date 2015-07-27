@@ -1,6 +1,6 @@
 angular.module('PortfolioServices', [])
 
-.factory('WorksService', function() {
+.factory('WorksService', function($q) {
     var worksService = {};
 
     var works = {
@@ -256,7 +256,9 @@ angular.module('PortfolioServices', [])
     };
 
     worksService.getWorks = function() {
-        return works;
+        return $q(function(resolve) {
+            resolve(works);
+        });
     }
 
     worksService.getWork = function(identifier) {

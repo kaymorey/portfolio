@@ -9,13 +9,18 @@ angular.module('PortfolioControllers', ['PortfolioServices'])
 })
 
 .controller('WorksCtrl', function WorksCtrl($scope, WorksService) {
-    $scope.works = WorksService.getWorks();
+    var promise = WorksService.getWorks();
+    promise.then(function(works) {
+        $scope.works = works;
+        $scope.activeBackground = $scope.works['lantern'].image;
+    });
 
     $scope.changeBackground = function(identifier) {
         angular.forEach($scope.works, function(work) {
             work.visible = false;
         });
         $scope.works[identifier].visible = true;
+        $scope.activeBackground = $scope.works[identifier].image;
     }
 })
 
@@ -23,8 +28,9 @@ angular.module('PortfolioControllers', ['PortfolioServices'])
     var identifier = $routeParams.identifier;
     $scope.work = WorksService.getWork(identifier);
 
-    $scope.works = WorksService.getWorks();
-    $scope.nextWork = $scope.works[$scope.work.next];
+    WorksService.getWorks().then(function(works) {
+        $scope.nextWork = works[$scope.work.next];
+    });
 })
 
 .controller('AboutCtrl', function AboutCtrl($scope) {
