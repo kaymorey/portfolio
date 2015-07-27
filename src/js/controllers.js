@@ -33,6 +33,8 @@ angular.module('PortfolioControllers', ['PortfolioServices'])
     });
 })
 
-.controller('AboutCtrl', function AboutCtrl($scope) {
-
+.controller('AboutCtrl', function AboutCtrl($scope, WorksService) {
+    WorksService.getWorks().then(function(works) {
+        $scope.works = works;
+    });
 });
