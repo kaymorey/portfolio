@@ -25,4 +25,8 @@ angular.module('PortfolioControllers', ['PortfolioServices'])
 
     $scope.works = WorksService.getWorks();
     $scope.nextWork = $scope.works[$scope.work.next];
+})
+
+.controller('AboutCtrl', function AboutCtrl($scope) {
+
 });

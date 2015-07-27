@@ -278,11 +278,19 @@ section.home {
 
 .works__background {
     background-position: center;
+    opacity: 0;
 
     -webkit-background-size: cover;
        -moz-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
+
+    @include transition(opacity 0.3s linear);
+}
+.works__background--visible {
+    position: relative;
+    top: 30px;
+    opacity: 1;
 }
 
 .works__items {
