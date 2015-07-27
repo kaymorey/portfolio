@@ -19,6 +19,10 @@ app.config(['$routeProvider',
             templateUrl: 'templates/work.html',
             controller: 'WorkCtrl'
         })
+        .when('/about', {
+            remplateUrl: 'templates/about.html',
+            controller: 'AboutCtrl'
+        })
         .otherwise({
             redirectTo: '/'
         });
