@@ -696,6 +696,7 @@ section.home {
 }
 
 .about-text__paragraph {
+  padding-top: 20px;
   font-family: 'Open Sans', Arial, sans-serif;
   line-height: 20px;
 }

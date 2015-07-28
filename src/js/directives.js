@@ -48,6 +48,31 @@ angular.module('PortfolioDirectives', [])
     }
 })
 
+.directive('fullTrianglesSvg', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            var s = Snap('#full-svg');
+            var size = 30;
+            var nbTriangles = 30;
+            var colors = ['#21a5ad', '#f5484a', '#fead13'];
+
+            var triangles = [];
+
+            for (i = 0; i < nbTriangles; i++) {
+                var x =  window.innerWidth * Math.random();
+                var y = window.innerHeight * Math.random();
+
+                var colorIndex = i % 3;
+                var color = colors[colorIndex];
+
+                var triangle = new Triangle(x, y, color, size, s, true);
+                triangles.push(triangle);
+            }
+        }
+    }
+})
+
 .directive('titleSvg', function($timeout) {
     return {
         restrict: 'A',
