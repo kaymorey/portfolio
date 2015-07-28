@@ -29,6 +29,7 @@ angular.module('PortfolioControllers', ['PortfolioServices'])
     $scope.work = WorksService.getWork(identifier);
 
     WorksService.getWorks().then(function(works) {
+        $scope.works = works;
         $scope.nextWork = works[$scope.work.next];
     });
 })
