@@ -14,10 +14,32 @@ var Triangle = (function() {
 
         this.angle = 0;
 
-        this.createTriangle(home);
+        this.home = home;
+        this.createTriangle();
+
+        this.screenWidth = window.innerWidth;
+        this.scrennHeight = window.innerHeight;
+        var self = this;
+        $(window).on('resize', function() {
+            self.replaceOnResize();
+        });
     }
 
-    Triangle.prototype.createTriangle = function(home) {
+    Triangle.prototype.replaceOnResize = function() {
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+
+        var relationX = this.x / this.screenWidth;
+        var relationY = this.y / this.scrennHeight;
+
+        var translateX = width * relationX - this.x;
+        var translateY = height * relationY - this.y;
+
+        this.triangle.transform('t'+translateX+','+translateY);
+        this.unfilled.transform('t'+translateX+','+translateY);
+    }
+
+    Triangle.prototype.createTriangle = function() {
         var filledTriangle = this.s.paper.polygon([
             this.x - this.size2, this.y + this.height,
             this.x + this.size2, this.y + this.height,
@@ -31,7 +53,7 @@ var Triangle = (function() {
         });
         this.triangle = filledTriangle;
 
-        if (home) {
+        if (this.home) {
             var unfilledTriangle = this.s.paper.polygon([
                 this.x - this.size2, this.y + this.height,
                 this.x + this.size2, this.y + this.height,

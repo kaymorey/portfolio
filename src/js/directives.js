@@ -57,17 +57,29 @@ angular.module('PortfolioDirectives', [])
             var nbTriangles = 30;
             var colors = ['#21a5ad', '#f5484a', '#fead13'];
 
+            var heights = [];
+            for (i = 0; i < nbTriangles; i++) {
+                var height = window.innerHeight / nbTriangles * i + size / 2;
+                heights.push(height);
+            }
+            heights = shuffle(heights);
+
             var triangles = [];
 
             for (i = 0; i < nbTriangles; i++) {
-                var x =  window.innerWidth * Math.random();
-                var y = window.innerHeight * Math.random();
+                var x =  window.innerWidth / nbTriangles * i + size / 2;
+                var y = heights[i];
 
                 var colorIndex = i % 3;
                 var color = colors[colorIndex];
 
                 var triangle = new Triangle(x, y, color, size, s, true);
                 triangles.push(triangle);
+            }
+
+            function shuffle(o){
+                for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+                    return o;
             }
         }
     }
