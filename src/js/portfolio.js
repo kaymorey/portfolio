@@ -9,6 +9,10 @@ $(document).ready(function() {
         });
     }
 
+    $(window).on('hashchange', function() {
+        init();
+    });
+
     Pace.on('done', function() {
         init();
     });

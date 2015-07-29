@@ -26,17 +26,19 @@ var Triangle = (function() {
     }
 
     Triangle.prototype.replaceOnResize = function() {
-        var width = window.innerWidth;
-        var height = window.innerHeight;
+        if (this.home) {
+            var width = window.innerWidth;
+            var height = window.innerHeight;
 
-        var relationX = this.x / this.screenWidth;
-        var relationY = this.y / this.scrennHeight;
+            var relationX = this.x / this.screenWidth;
+            var relationY = this.y / this.scrennHeight;
 
-        var translateX = width * relationX - this.x;
-        var translateY = height * relationY - this.y;
+            var translateX = width * relationX - this.x;
+            var translateY = height * relationY - this.y;
 
-        this.triangle.transform('t'+translateX+','+translateY);
-        this.unfilled.transform('t'+translateX+','+translateY);
+            this.triangle.transform('t'+translateX+','+translateY);
+            this.unfilled.transform('t'+translateX+','+translateY);
+        }
     }
 
     Triangle.prototype.createTriangle = function() {

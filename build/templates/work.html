@@ -47,8 +47,8 @@
     </div>
     <nav class="work-nav">
         <a class="work-nav__link work-nav__link--back {{ work.color }}" href="#/works">Back</a>
-        <a class="work-nav__link work-nav__link--next {{ work.color }}" href="#/works/{{ work.next }}" target="_blank">
-            <img class="work-nav__background full-img" src="../images/works/{{ nextWork.image }}" alt="">
+        <a class="work-nav__link work-nav__link--next {{ work.color }}" href="#/works/{{ work.next }}" style="background-image:url(../images/works/{{ nextWork.image }})">
+            <div class="work-nav__overlay"></div>
             <span class="work-nav__text">Next project</span>
         </a>
     </nav>
