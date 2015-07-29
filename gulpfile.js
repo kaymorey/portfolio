@@ -41,7 +41,7 @@ gulp.task('templates', function() {
 
 gulp.task('css', function() {
     return gulp.src('src/css/*.scss')
-        // .pipe(sourcemaps.init())
+        .pipe(sourcemaps.init())
         .pipe(compass({
             sass: 'src/css',
             require: ['susy']
