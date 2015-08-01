@@ -57,6 +57,7 @@ gulp.task('scripts', function() {
         'src/js/vendor/angular-route.min.js',
         'src/js/vendor/jquery.min.js',
         'src/js/vendor/snap.svg-min.js',
+        'src/js/vendor/clip-path-polygon.js',
         'src/js/vendor/pace.min.js',
         'src/js/vendor/TweenMax.min.js',
         'src/js/vendor/jquery.superscrollorama.js',

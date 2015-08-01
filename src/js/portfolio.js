@@ -1,6 +1,16 @@
 $(document).ready(function() {
 
     var init = function() {
+        scrollorama();
+
+        var points = [[0, 65], [0, 100], [35, 100], [100, 35], [100, 0], [65, 0]];
+        $('.home__skew').clipPath(points, {
+            isPercentage: true,
+            svgDefId: 'homeSkewSvg'
+        });
+    }
+
+    var scrollorama = function() {
         var controller = $.superscrollorama();
 
         $('.work__section').each(function(index) {
