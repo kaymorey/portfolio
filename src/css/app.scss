@@ -83,6 +83,9 @@ a {
     background-color: transparent;
 }
 .menu__button--middle {
+    position: absolute;
+    top: 11px;
+    left: 0;
     display: inline-block;
     width: 20px;
     height: 2px;
@@ -94,6 +97,8 @@ a {
 .menu__button::before, .menu__button::after {
     content: '';
     display: inline-block;
+    position: absolute;
+    left: 0;
     width: 100%;
     height: 2px;
     background-color: #FFF;
@@ -102,13 +107,11 @@ a {
     @include transition-delay(0.3s, 0s);
 }
 .menu__button::before {
-    position: absolute;
     top: 4px;
 
     @include transition-property(top, transform);
 }
 .menu__button::after {
-    position: absolute;
     bottom: 0px;
 
     @include transition-property(bottom, transform);

@@ -2,7 +2,7 @@ var gulp   = require('gulp'),
 compass    = require('gulp-compass'),
 watch      = require('gulp-watch'),
 batch      = require('gulp-batch'),
-handlebars = require('gulp-ember-handlebars'),
+minify     = require('gulp-minify-css'),
 uglify     = require('gulp-uglify'),
 connect    = require('gulp-connect'),
 concat     = require('gulp-concat'),
@@ -46,6 +46,7 @@ gulp.task('css', function() {
             sass: 'src/css',
             require: ['susy']
         }))
+        .pipe(minify())
         .pipe(concat('app.css'))
         // .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('build/css'));
