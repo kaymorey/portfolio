@@ -11,6 +11,10 @@ $susy: (
     gutters: 1/4,
 );
 
+html {
+    font-size: 62.5%;
+}
+
 a {
     text-decoration: none;
 }
@@ -54,9 +58,43 @@ a {
     @include transform(translateX(-50%) translateY(-50%));
 }
 
+section.container {
+    display: none;
+}
+
+
+/***********************
+*      PACE LOADER     *
+************************/
+
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.pace-inactive {
+    display: none;
+}
+
+.pace .pace-progress {
+    background: $red-color;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+}
+
+
 /***********************
 *         MENU         *
 ************************/
+
 .menu {
     position: fixed;
     top: 0;
@@ -154,7 +192,7 @@ a {
 }
 .menu-content__link {
     color: #FFF;
-    font-size: 21px;
+    @include font-size(21);
     font-family: 'yanone-light', Arial, sans-serif;
     line-height: 30px;
 }
@@ -174,71 +212,6 @@ section.home {
     background-color: $lighter-grey-color;
 }
 
-.home__skew {
-    width : 100%;
-    height: 100%;
-
-    background-color: #FFF;
-    overflow: hidden;
-}
-
-/* ------ LINKS ------ */
-
-.home-link {
-    position: relative;
-    display: inline-block;
-    padding: 10px;
-    border: none;
-    outline: none;
-
-    font-family: 'yanone-light', Arial, sans-serif;
-    font-size: 25px;
-    text-transform: uppercase;
-    cursor: pointer;
-    color: #FFF;
-    background-color: $red-color;
-
-    &:hover {
-        color: $red-color;
-        background-color: #FFF;
-    }
-
-    &::after {
-        content: '';
-        display: inline-block;
-        width: calc(100% - 4px);
-        height: calc(100% - 4px);
-        border: solid $red-color 2px;
-
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        @include transition(0.4s ease-out all);
-    }
-}
-
-.home-link--clicked::after {
-    opacity: 0;
-    width: calc(100% + 16px);
-    height: calc(100% + 16px);
-    position: absolute;
-    top: -8px;
-    left: -8px;
-}
-
-.home-link__project {
-    position: absolute;
-    top: 100px;
-    left: 100px;
-}
-
-.home-link__about {
-    position: absolute;
-    bottom: 100px;
-    right: 100px;
-}
-
 /* ------ TEXTS ------ */
 
 .home-title {
@@ -256,20 +229,19 @@ section.home {
 .home-title__hello {
     font-family: 'wolf', Arial, sans-serif;
     color: $red-color;
-    font-size: 160px;
+    @include font-size(160);
 }
 .home-title__presentation {
     font-family: 'jennasue', Arial, sans-serif;
-    font-size: 60px;
+    @include font-size(60);
 }
 .home-title__name {
     font-family: 'sunn', Arial, sans-serif;
-    font-size: 88px;
+    @include font-size(88);
 }
 .home-title__job {
-    font-family: 'yanone-light', Arial, sans-serif;
-    font-size: 39px;
-    text-transform: uppercase;
+    font-family: 'apercu-light', Arial, sans-serif;
+    @include font-size(26);
 }
 
 @media screen and (max-width: 1024px) {
@@ -322,7 +294,7 @@ section.home {
     top: 50%;
 
     font-family: 'yanone-light', Arial, sans-serif;
-    font-size: 60px;
+    @include font-size(60);
     text-align: center;
 
     @include transform(translateY(-50%) translateX(-50%));
@@ -368,7 +340,7 @@ section.home {
     width: 100%;
 
     font-family: 'yanone-light', Arial, sans-serif;
-    font-size: 20px;
+    @include font-size(20);
     opacity: 0;
 
     @include transform(translate3d(-50%, -10px, 0));
@@ -404,7 +376,7 @@ section.home {
 .work__title {
     // padding: 0 0 5px 0;
     font-family: 'yanone-light', Arial, sans-serif;
-    font-size: 60px;
+    @include font-size(60);
     text-align: center;
     color: $grey-color;
 }
@@ -412,20 +384,20 @@ section.home {
 .work__main-subtitle {
     text-align: center;
     font-family: 'yanone-light', Arial, sans-serif;
-    font-size: 20px;
+    @include font-size(20);
 }
 
 .work__subtitle {
     padding: 40px 0 15px 0;
     font-family: 'wigrum', Arial, sans-serif;
-    font-size: 35px;
+    @include font-size(35);
     color: $red-color;
 }
 
 .work__text {
     line-height: 28px;
     margin: 0 auto;
-    font-size: 16px;
+    @include font-size(16);
 }
 
 /* -------- BLOCKS ------- */
@@ -477,13 +449,13 @@ section.home {
     vertical-align: middle;
     width: 50%;
     margin-right: 10%;
-    font-size: 16px;
+    @include font-size(16);
 }
 .work__description--right {
     display: inline-block;
     vertical-align: middle;
     width: 40%;
-    font-size: 16px;
+    @include font-size(16);
 }
 
 .work-description__subtitle {
@@ -593,7 +565,7 @@ section.home {
     line-height: 300px;
     text-align: center;
     font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 25px;
+    @include font-size(25);
     text-transform: uppercase;
 }
 
@@ -679,41 +651,4 @@ section.about {
 }
 .yellow {
     color: $yellow-color;
-}
-
-
-
-
-
-
-
-body:not(.pace-done) > :not(.pace),body:not(.pace-done):before,body:not(.pace-done):after {
-  opacity:0
-}
-
-.pace {
-    -webkit-pointer-events: none;
-    pointer-events: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: $lighter-grey-color;
-}
-
-.pace-inactive {
-    display: none;
-}
-
-.pace .pace-progress {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #FFF;
 }

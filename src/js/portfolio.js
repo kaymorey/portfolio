@@ -3,6 +3,8 @@ $(document).ready(function() {
     var init = function() {
         scrollorama();
 
+        $('section.container').fadeIn(1000);
+
         var points = [[0, 65], [0, 100], [35, 100], [100, 35], [100, 0], [65, 0]];
         $('.home__skew').clipPath(points, {
             isPercentage: true,

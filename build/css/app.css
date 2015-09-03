@@ -1,47 +1,3 @@
-
-@font-face {
-  font-family: 'yanone-light';
-  src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot");
-  src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.woff2") format("woff2"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.woff") format("woff"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.ttf") format("truetype"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'yanone';
-  src: url("../fonts/yanone/yanonekaffeesatz-regular-webfont.eot");
-  src: url("../fonts/yanone/yanonekaffeesatz-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.woff2") format("woff2"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.woff") format("woff"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.ttf") format("truetype"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzlight") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'jennasue';
-  src: url("../fonts/jenna/jennasue-webfont.eot");
-  src: url("../fonts/jenna/jennasue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/jenna/jennasue-webfont.woff2") format("woff2"), url("../fonts/jenna/jennasue-webfont.woff") format("woff"), url("../fonts/jenna/jennasue-webfont.ttf") format("truetype"), url("../fonts/jenna/jennasue-webfont.svg#jenna_sueregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'sunn';
-  src: url("../fonts/sunn/sunn-webfont.eot");
-  src: url("../fonts/sunn/sunn-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sunn/sunn-webfont.woff2") format("woff2"), url("../fonts/sunn/sunn-webfont.woff") format("woff"), url("../fonts/sunn/sunn-webfont.ttf") format("truetype"), url("../fonts/sunn/sunn-webfont.svg#sunnregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'wolf';
-  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot");
-  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/wolf/wolf_in_the_city-webfont.woff2") format("woff2"), url("../fonts/wolf/wolf_in_the_city-webfont.woff") format("woff"), url("../fonts/wolf/wolf_in_the_city-webfont.ttf") format("truetype"), url("../fonts/wolf/wolf_in_the_city-webfont.svg#wolf_in_the_cityregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'wigrum';
-  src: url("../fonts/wigrum/wigrum-regular.eot");
-  src: url("../fonts/wigrum/wigrum-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/wigrum/wigrum-regular.woff2") format("woff2"), url("../fonts/wigrum/wigrum-regular.woff") format("woff"), url("../fonts/wigrum/wigrum-regular.ttf") format("truetype"), url("../fonts/wigrum/wigrum-regular.svg#wigrumregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -140,6 +96,38 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'apercu-bold';
+  src: url("../fonts/apercu/apercu-bold-webfont.eot");
+  src: url("../fonts/apercu/apercu-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/apercu/apercu-bold-webfont.woff2") format("woff2"), url("../fonts/apercu/apercu-bold-webfont.woff") format("woff"), url("../fonts/apercu/apercu-bold-webfont.ttf") format("truetype"), url("../fonts/apercu/apercu-bold-webfont.svg#apercubold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'apercu-medium';
+  src: url("../fonts/apercu/apercu-medium-webfont.eot");
+  src: url("../fonts/apercu/apercu-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/apercu/apercu-medium-webfont.woff2") format("woff2"), url("../fonts/apercu/apercu-medium-webfont.woff") format("woff"), url("../fonts/apercu/apercu-medium-webfont.ttf") format("truetype"), url("../fonts/apercu/apercu-medium-webfont.svg#apercumedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'apercu-light';
+  src: url("../fonts/apercu/apercu-light-webfont.eot");
+  src: url("../fonts/apercu/apercu-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/apercu/apercu-light-webfont.woff2") format("woff2"), url("../fonts/apercu/apercu-light-webfont.woff") format("woff"), url("../fonts/apercu/apercu-light-webfont.ttf") format("truetype"), url("../fonts/apercu/apercu-light-webfont.svg#aperculight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'apercu-regular';
+  src: url("../fonts/apercu/apercu-webfont.eot");
+  src: url("../fonts/apercu/apercu-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/apercu/apercu-webfont.woff2") format("woff2"), url("../fonts/apercu/apercu-webfont.woff") format("woff"), url("../fonts/apercu/apercu-webfont.ttf") format("truetype"), url("../fonts/apercu/apercu-webfont.svg#apercuregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 62.5%;
+}
+
 a {
   text-decoration: none;
 }
@@ -177,6 +165,35 @@ a {
   -ms-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+}
+
+section.container {
+  display: none;
+}
+
+/***********************
+*      PACE LOADER     *
+************************/
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #f5484a;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
 }
 
 /***********************
@@ -302,6 +319,7 @@ a {
 .menu-content__link {
   color: #FFF;
   font-size: 21px;
+  font-size: 2.1rem;
   font-family: 'yanone-light', Arial, sans-serif;
   line-height: 30px;
 }
@@ -319,67 +337,6 @@ a {
 ************************/
 section.home {
   background-color: #f0f1f5;
-}
-
-.home__skew {
-  width: 100%;
-  height: 100%;
-  background-color: #FFF;
-  overflow: hidden;
-}
-
-/* ------ LINKS ------ */
-.home-link {
-  position: relative;
-  display: inline-block;
-  padding: 10px;
-  border: none;
-  outline: none;
-  font-family: 'yanone-light', Arial, sans-serif;
-  font-size: 25px;
-  text-transform: uppercase;
-  cursor: pointer;
-  color: #FFF;
-  background-color: #f5484a;
-}
-.home-link:hover {
-  color: #f5484a;
-  background-color: #FFF;
-}
-.home-link::after {
-  content: '';
-  display: inline-block;
-  width: calc(100% - 4px);
-  height: calc(100% - 4px);
-  border: solid #f5484a 2px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -moz-transition: ease-out 0.4s all;
-  -o-transition: ease-out 0.4s all;
-  -webkit-transition: ease-out 0.4s all;
-  transition: ease-out 0.4s all;
-}
-
-.home-link--clicked::after {
-  opacity: 0;
-  width: calc(100% + 16px);
-  height: calc(100% + 16px);
-  position: absolute;
-  top: -8px;
-  left: -8px;
-}
-
-.home-link__project {
-  position: absolute;
-  top: 100px;
-  left: 100px;
-}
-
-.home-link__about {
-  position: absolute;
-  bottom: 100px;
-  right: 100px;
 }
 
 /* ------ TEXTS ------ */
@@ -400,22 +357,25 @@ section.home {
   font-family: 'wolf', Arial, sans-serif;
   color: #f5484a;
   font-size: 160px;
+  font-size: 16rem;
 }
 
 .home-title__presentation {
   font-family: 'jennasue', Arial, sans-serif;
   font-size: 60px;
+  font-size: 6rem;
 }
 
 .home-title__name {
   font-family: 'sunn', Arial, sans-serif;
   font-size: 88px;
+  font-size: 8.8rem;
 }
 
 .home-title__job {
-  font-family: 'yanone-light', Arial, sans-serif;
-  font-size: 39px;
-  text-transform: uppercase;
+  font-family: 'apercu-light', Arial, sans-serif;
+  font-size: 26px;
+  font-size: 2.6rem;
 }
 
 @media screen and (max-width: 1024px) {
@@ -471,6 +431,7 @@ section.home {
   top: 50%;
   font-family: 'yanone-light', Arial, sans-serif;
   font-size: 60px;
+  font-size: 6rem;
   text-align: center;
   -moz-transform: translateY(-50%) translateX(-50%);
   -ms-transform: translateY(-50%) translateX(-50%);
@@ -517,6 +478,7 @@ section.home {
   width: 100%;
   font-family: 'yanone-light', Arial, sans-serif;
   font-size: 20px;
+  font-size: 2rem;
   opacity: 0;
   -moz-transform: translate3d(-50%, -10px, 0);
   -ms-transform: translate3d(-50%, -10px, 0);
@@ -558,6 +520,7 @@ section.home {
 .work__title {
   font-family: 'yanone-light', Arial, sans-serif;
   font-size: 60px;
+  font-size: 6rem;
   text-align: center;
   color: #333333;
 }
@@ -566,12 +529,14 @@ section.home {
   text-align: center;
   font-family: 'yanone-light', Arial, sans-serif;
   font-size: 20px;
+  font-size: 2rem;
 }
 
 .work__subtitle {
   padding: 40px 0 15px 0;
   font-family: 'wigrum', Arial, sans-serif;
   font-size: 35px;
+  font-size: 3.5rem;
   color: #f5484a;
 }
 
@@ -579,6 +544,7 @@ section.home {
   line-height: 28px;
   margin: 0 auto;
   font-size: 16px;
+  font-size: 1.6rem;
 }
 
 /* -------- BLOCKS ------- */
@@ -627,6 +593,7 @@ section.home {
   width: 50%;
   margin-right: 10%;
   font-size: 16px;
+  font-size: 1.6rem;
 }
 
 .work__description--right {
@@ -634,6 +601,7 @@ section.home {
   vertical-align: middle;
   width: 40%;
   font-size: 16px;
+  font-size: 1.6rem;
 }
 
 .work-description__subtitle {
@@ -740,6 +708,7 @@ section.home {
   text-align: center;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 25px;
+  font-size: 2.5rem;
   text-transform: uppercase;
 }
 
@@ -828,34 +797,75 @@ section.about {
   color: #fead13;
 }
 
-body:not(.pace-done) > :not(.pace), body:not(.pace-done):before, body:not(.pace-done):after {
-  opacity: 0;
+@font-face {
+  font-family: 'yanone-light';
+  src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot");
+  src: url("../fonts/yanone/yanonekaffeesatz-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.woff2") format("woff2"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.woff") format("woff"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.ttf") format("truetype"), url("../fonts/yanone/yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'yanone';
+  src: url("../fonts/yanone/yanonekaffeesatz-regular-webfont.eot");
+  src: url("../fonts/yanone/yanonekaffeesatz-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.woff2") format("woff2"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.woff") format("woff"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.ttf") format("truetype"), url("../fonts/yanone/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzlight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'jennasue';
+  src: url("../fonts/jenna/jennasue-webfont.eot");
+  src: url("../fonts/jenna/jennasue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/jenna/jennasue-webfont.woff2") format("woff2"), url("../fonts/jenna/jennasue-webfont.woff") format("woff"), url("../fonts/jenna/jennasue-webfont.ttf") format("truetype"), url("../fonts/jenna/jennasue-webfont.svg#jenna_sueregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'sunn';
+  src: url("../fonts/sunn/sunn-webfont.eot");
+  src: url("../fonts/sunn/sunn-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sunn/sunn-webfont.woff2") format("woff2"), url("../fonts/sunn/sunn-webfont.woff") format("woff"), url("../fonts/sunn/sunn-webfont.ttf") format("truetype"), url("../fonts/sunn/sunn-webfont.svg#sunnregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'wolf';
+  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot");
+  src: url("../fonts/wolf/wolf_in_the_city-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/wolf/wolf_in_the_city-webfont.woff2") format("woff2"), url("../fonts/wolf/wolf_in_the_city-webfont.woff") format("woff"), url("../fonts/wolf/wolf_in_the_city-webfont.ttf") format("truetype"), url("../fonts/wolf/wolf_in_the_city-webfont.svg#wolf_in_the_cityregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'wigrum';
+  src: url("../fonts/wigrum/wigrum-regular.eot");
+  src: url("../fonts/wigrum/wigrum-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/wigrum/wigrum-regular.woff2") format("woff2"), url("../fonts/wigrum/wigrum-regular.woff") format("woff"), url("../fonts/wigrum/wigrum-regular.ttf") format("truetype"), url("../fonts/wigrum/wigrum-regular.svg#wigrumregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'apercu-bold';
+  src: url("../fonts/apercu/apercu-bold-webfont.eot");
+  src: url("../fonts/apercu/apercu-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/apercu/apercu-bold-webfont.woff2") format("woff2"), url("../fonts/apercu/apercu-bold-webfont.woff") format("woff"), url("../fonts/apercu/apercu-bold-webfont.ttf") format("truetype"), url("../fonts/apercu/apercu-bold-webfont.svg#apercubold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'apercu-medium';
+  src: url("../fonts/apercu/apercu-medium-webfont.eot");
+  src: url("../fonts/apercu/apercu-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/apercu/apercu-medium-webfont.woff2") format("woff2"), url("../fonts/apercu/apercu-medium-webfont.woff") format("woff"), url("../fonts/apercu/apercu-medium-webfont.ttf") format("truetype"), url("../fonts/apercu/apercu-medium-webfont.svg#apercumedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'apercu-light';
+  src: url("../fonts/apercu/apercu-light-webfont.eot");
+  src: url("../fonts/apercu/apercu-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/apercu/apercu-light-webfont.woff2") format("woff2"), url("../fonts/apercu/apercu-light-webfont.woff") format("woff"), url("../fonts/apercu/apercu-light-webfont.ttf") format("truetype"), url("../fonts/apercu/apercu-light-webfont.svg#aperculight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'apercu-regular';
+  src: url("../fonts/apercu/apercu-webfont.eot");
+  src: url("../fonts/apercu/apercu-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/apercu/apercu-webfont.woff2") format("woff2"), url("../fonts/apercu/apercu-webfont.woff") format("woff"), url("../fonts/apercu/apercu-webfont.ttf") format("truetype"), url("../fonts/apercu/apercu-webfont.svg#apercuregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.pace {
-  -webkit-pointer-events: none;
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #f0f1f5;
-}
-
-.pace-inactive {
-  display: none;
-}
-
-.pace .pace-progress {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #FFF;
-}
 
